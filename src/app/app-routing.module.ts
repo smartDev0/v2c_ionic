@@ -31,6 +31,11 @@ const routes: Routes = [
     loadChildren: () =>
       import("./pages/auth/done/done.module").then((m) => m.DonePageModule),
   },
+  {
+    path: "home",
+    loadChildren: () =>
+      import("./pages/home/home.module").then((m) => m.HomePageModule),
+  },
 ];
 
 @NgModule({

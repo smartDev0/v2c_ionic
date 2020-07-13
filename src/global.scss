@@ -254,3 +254,31 @@
   outline: none;
   border-radius: 40px;
 }
+.setting-img {
+  width: 74px;
+  position: absolute;
+  cursor: pointer;
+}
+.options-img {
+  position: absolute;
+  width: 50px;
+  right: 10px;
+  top: 30px;
+  cursor: pointer;
+}
+.date-time {
+  color: #343434;
+  font-family: "Avenir-Book";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  padding-top: 40px;
+}
+.date-time ion-datetime {
+  width: 130px;
+  border: 1px solid #ebebeb;
+  border-radius: 30px;
+  margin: auto;
+  padding: 8px 10px;
+}
