@@ -1,3 +1,35 @@
-<p>
-  forgot works!
-</p>
+<ion-content fullscreen>
+  <img src="assets/ico-close.png" class="close-icon" routerLink="/login" routerDirection="forward">
+  <div class="logo-img">
+    <img src="assets/logo.png">
+  </div>
+  <form>
+    <div class="form">
+      <div class="forgot-form">
+        <div class="forgot-title">
+          ¿HAS OLVIDADO LA CONTRASEÑA?
+        </div>
+        <br>
+        <div class="forgot-text">
+          ¡No pasa nada! Introduce el email
+          con el que te registraste en nuestra app.
+        </div>
+        <div class="forgot-text">
+          En unos minutos recibirás un correo con
+          los pasos para restablecer la contraseña.
+        </div>
+        <br>
+        <div class="form-group">
+          <div class="input-group">
+            <ion-icon name="mail" class="email-icon"></ion-icon>
+            <input type="email" class="form-control forgot-email" name="email"
+              placeholder="Escribe tu correo electrónico">
+          </div>
+        </div>
+        <br>
+        <button class="signin-button">ACCEDER</button>
+      </div>
+
+    </div>
+  </form>
+</ion-content>

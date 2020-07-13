@@ -19,6 +19,13 @@ const routes: Routes = [
         (m) => m.RegisterPageModule
       ),
   },
+  {
+    path: "forgot",
+    loadChildren: () =>
+      import("./pages/auth/forgot/forgot.module").then(
+        (m) => m.ForgotPageModule
+      ),
+  },
 ];
 
 @NgModule({
