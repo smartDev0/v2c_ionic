@@ -1,3 +1,41 @@
-<p>
-  register works!
-</p>
+<ion-content fullscreen>
+  <img src="assets/ico-close.png" class="close-icon" routerLink="/login" routerDirection="forward">
+  <form>
+    <div class="form">
+      <div class="register-title">
+        INTRODUCE
+        TUS DATOS
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <input type="email" class="form-control" name="email" placeholder="Correo electrónico">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <input type="password" class="form-control" name="password" placeholder="Contraseña">
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="check-group">
+        <ion-checkbox color="primary" class="checkbox"></ion-checkbox>
+        <ion-label class="register-text">He leído y aceptado la política de Términos
+          y Condiciones y la Privacidad de Datos.</ion-label>
+      </div>
+      <div class="check-group">
+        <ion-checkbox color="primary" class="checkbox"></ion-checkbox>
+        <ion-label class="register-text">Acepto el tratamiento de mis datos para el
+          envío de comunicaciones comerciales y
+          publicitarias en relación con nuestros
+          productos y servicios (opcional).</ion-label>
+      </div>
+      <br>
+      <br>
+      <br>
+      <button class="signin-button">CREAR CUENTA</button>
+    </div>
+  </form>
+
+</ion-content>
