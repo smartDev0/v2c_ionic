@@ -1,7 +1,8 @@
 {
   "name": "v2c",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
