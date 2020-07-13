@@ -2,7 +2,113 @@
   <img src="assets/setting.png" class="setting-img">
   <img src="assets/options.png" class="options-img">
   <div class="date-time">
-     <ion-datetime value="{{today | date}}" placeholder="Select Date"></ion-datetime>
+    <ion-datetime value="{{today | date}}" placeholder="Select Date"></ion-datetime>
   </div>
- 
+  <div class="progress-group">
+    <ion-row>
+      <ion-col>
+        <div class="d-flex">
+          <circle-progress [percent]="85" [radius]="30" [outerStrokeWidth]="2" [innerStrokeWidth]="1"
+            [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
+          </circle-progress>
+          <ion-label class="progress-text d-flex-v-center">
+            <div>
+              Energía total
+              <div class="progress-title">
+                280 kWh
+              </div>
+            </div>
+          </ion-label>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div class="d-flex">
+          <circle-progress [percent]="25" [radius]="30" [outerStrokeWidth]="2" [innerStrokeWidth]="1"
+            [outerStrokeColor]="'#712ce2'" [innerStrokeColor]="'#712ce2'" [animation]="true" [animationDuration]="300">
+          </circle-progress>
+          <ion-label class="progress-text d-flex-v-center">
+            <div>
+              Coste total
+              <div class="progress-title">
+                72,80 €
+              </div>
+            </div>
+          </ion-label>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col style="text-align: center;">
+      <ion-label class="home-title">
+        Puntos de recarga
+      </ion-label>
+      <img src="assets/plus.png" class="plus-img">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-card style="margin: 0px;">
+        <ion-card-header>
+          <img src="assets/garaje.png" class="device-img">
+        </ion-card-header>
+        <ion-card-content>
+         <div class="device-card-text">
+            Dark Garaje B
+         </div>
+         <div class="text-center">
+           <ion-toggle name="kiwi" color="success" checked></ion-toggle>
+         </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col >
+      <ion-card style="margin: 0px;">
+        <ion-card-header>
+          <img src="assets/chalet.png" class="device-img">
+        </ion-card-header>
+        <ion-card-content>
+         <div class="device-card-text">
+            Plus Chalet
+         </div>
+         <div class="text-center">
+           <ion-toggle name="kiwi" color="success"></ion-toggle>
+         </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-card style="margin: 0px;">
+        <ion-card-header class="text-center">
+          <img src="assets/plaza.png" class="device-img">
+        </ion-card-header>
+        <ion-card-content>
+         <div class="device-card-text">
+            Up Plaza 28
+         </div>
+         <div class="text-center">
+           <ion-toggle name="kiwi" color="success" ></ion-toggle>
+         </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card style="margin: 0px;">
+        <ion-card-header>
+          <img src="assets/empresa.png" class="device-img">
+        </ion-card-header>
+        <ion-card-content>
+         <div class="device-card-text">
+            Pole Empresa
+         </div>
+         <div class="text-center">
+           <ion-toggle name="kiwi" color="success" checked></ion-toggle>
+         </div>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  </div>
+  
 </ion-content>

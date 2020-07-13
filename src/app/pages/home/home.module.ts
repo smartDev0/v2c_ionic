@@ -6,6 +6,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { IonicModule } from "@ionic/angular";
 
 import { HomeComponent } from "./home.component";
+import { NgCircleProgressModule } from "ng-circle-progress";
 const routes: Routes = [
   {
     path: "",
@@ -19,6 +20,15 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 40,
+      outerStrokeWidth: 8,
+      // innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+    }),
   ],
   declarations: [HomeComponent],
   exports: [],
