@@ -1,0 +1,7 @@
+{
+  "name": "v2c",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
