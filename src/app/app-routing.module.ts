@@ -26,6 +26,11 @@ const routes: Routes = [
         (m) => m.ForgotPageModule
       ),
   },
+  {
+    path: "done",
+    loadChildren: () =>
+      import("./pages/auth/done/done.module").then((m) => m.DonePageModule),
+  },
 ];
 
 @NgModule({

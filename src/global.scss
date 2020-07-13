@@ -208,3 +208,44 @@
   background-color: #979899;
   padding: 13px 6px;
 }
+.done-form {
+  background: linear-gradient(180deg, red, #fd1d02e0, #fa3a32d6, #f93030bd);
+  min-height: 100vh;
+  padding: 40px;
+}
+.done-form img {
+  padding: 40px 0;
+}
+.done-title {
+  text-align: center;
+  color: white;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: 400;
+  //   line-height: 63px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.done-text {
+  text-align: center;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.done-button {
+  background: #ffffff;
+  box-shadow: 0px 13px 28px rgba(237, 0, 0, 0.53);
+  color: #ed0000;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 44px;
+  text-align: center;
+  width: 100%;
+  outline: none;
+  border-radius: 40px;
+}
