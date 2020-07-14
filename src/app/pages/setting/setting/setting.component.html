@@ -1,3 +1,93 @@
-<p>
-  setting works!
-</p>
+<ion-header no-border class="ion-no-border">
+  <ion-toolbar color="primary" class="toolbar-radius">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/home" routerDirection="forward">
+    <ion-row>
+      <ion-col>
+        <div class="d-flex-v-center">
+          <ion-label class="setting-header-title">
+            ANTONIO LÓPEZ
+          </ion-label>
+          <img src="assets/edit.png" alt="..." class="edit-icon">
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <div class="setting-form">
+    <ion-row>
+      <ion-col>
+        <ion-card style="margin: 3px 0;">
+          <ion-card-content style="padding: 3px 5px;">
+              <ion-row>
+                <ion-col>
+                  <div class="d-flex">
+                    <div class="privacy">
+                      <img src="assets/private.png" alt="..." >
+                    </div>
+                    <ion-label>
+                      Privacidad
+                      <div class="setting-card-text">
+                        Cambiar la contraseña
+                      </div>
+                    </ion-label>
+                  </div>
+                </ion-col>
+              </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card style="margin: 0px;">
+          <ion-card-content style="padding: 3px 5px;">
+              <ion-row>
+                <ion-col>
+                  <div class="d-flex">
+                    <div class="privacy">
+                      <img src="assets/notification.png" alt="..." >
+                    </div>
+                    <ion-label>
+                      Notificaciones
+                      <div class="setting-card-text">
+                        Activar o desactivar las notificaciones
+                      </div>
+                    </ion-label>
+                  </div>
+                </ion-col>
+              </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card style="margin: 0px;">
+          <ion-card-content style="padding: 3px 5px;">
+              <ion-row>
+                <ion-col>
+                  <div class="d-flex">
+                    <div class="privacy">
+                      <img src="assets/help.png" alt="..." >
+                    </div>
+                    <ion-label>
+                      Soporte
+                      <div class="setting-card-text">
+                        Preguntas frecuentes o contactar con V2C
+                      </div>
+                    </ion-label>
+                  </div>
+                </ion-col>
+              </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <br>
+    <br>
+    <br>
+    <br>
+     <button class="signin-button" routerLink="/done" routerDirection="forward">CERRAR SESIÓN</button>
+  </div>
+</ion-content>
