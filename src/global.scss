@@ -217,6 +217,7 @@
   background: linear-gradient(180deg, red, #fd1d02e0, #fa3a32d6, #f93030bd);
   min-height: 100vh;
   padding: 30px 50px;
+  text-align: center;
 }
 .done-form img {
   padding: 30px 0;
@@ -411,4 +412,35 @@ ion-row {
   //   line-height: 41px;
   text-align: center;
   padding: 10px 5px;
+}
+.notification-card-title {
+  color: #ed0000;
+  font-family: Arial;
+  font-size: 13px;
+}
+.arrow-img {
+  width: 17px;
+}
+.notification-question-title {
+  font-family: Arial;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+.notification-question-text {
+  color: #595959;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.425px;
+  line-height: 24px;
+}
+.d-flex-v-space {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  justify-content: space-between;
+}
+.path-img {
+  width: 8px;
 }

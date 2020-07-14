@@ -57,6 +57,11 @@ const routes: Routes = [
         (m) => m.PrivacyPageModule
       ),
   },
+  {
+    path: "help",
+    loadChildren: () =>
+      import("./pages/setting/help/help.module").then((m) => m.HelpPageModule),
+  },
 ];
 
 @NgModule({
