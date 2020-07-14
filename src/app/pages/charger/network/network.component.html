@@ -1,3 +1,52 @@
-<p>
-  network works!
-</p>
+<ion-content fullscreen>
+  <img src="assets/ico-close.png" class="close-icon" routerLink="/home" routerDirection="forward">
+  <div class="network-form">
+    <ion-row>
+      <ion-col>
+        <ion-label class="network-title">
+          SELECCIONA LA RED WIFI
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <div class="network-select">
+      <ion-item class="ion-item" no-lines lines="none">
+        <ion-label>Network</ion-label>
+        <ion-select interface="popover">
+          <ion-select-option value="nes">NES</ion-select-option>
+          <ion-select-option value="n64">Nintendo64</ion-select-option>
+          <ion-select-option value="ps">PlayStation</ion-select-option>
+          <ion-select-option value="genesis">Sega Genesis</ion-select-option>
+          <ion-select-option value="saturn">Sega Saturn</ion-select-option>
+          <ion-select-option value="snes">SNES</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-label class="network-title">
+         INTRODUCE LA CONTRASEÑA
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input type="text" class="network-input"></ion-input>
+         <img src="assets/eye.png" alt="..." class="eye-icon">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="network-text" routerLink="/network-done" routerDirection="forward">
+
+            Omitir configuración WiFi
+        </div>
+      </ion-col>
+    </ion-row>
+    <br>
+    <br>
+    <div class="charger-action">
+      <button class="signin-button" routerLink="/network-done" routerDirection="forward">CONECTAR</button>
+    </div>
+  </div>
+</ion-content>
