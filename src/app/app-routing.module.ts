@@ -76,6 +76,27 @@ const routes: Routes = [
         (m) => m.ReportDonePageModule
       ),
   },
+  {
+    path: "charger",
+    loadChildren: () =>
+      import("./pages/charger/charger/charger.module").then(
+        (m) => m.ChargerPageModule
+      ),
+  },
+  {
+    path: "network",
+    loadChildren: () =>
+      import("./pages/charger/network/network.module").then(
+        (m) => m.NetworkPageModule
+      ),
+  },
+  {
+    path: "network-done",
+    loadChildren: () =>
+      import("./pages/charger/network-done/network-done.module").then(
+        (m) => m.NetworkDonePageModule
+      ),
+  },
 ];
 
 @NgModule({
