@@ -50,6 +50,13 @@ const routes: Routes = [
         (m) => m.NotificationPageModule
       ),
   },
+  {
+    path: "privacy",
+    loadChildren: () =>
+      import("./pages/setting/privacy/privacy.module").then(
+        (m) => m.PrivacyPageModule
+      ),
+  },
 ];
 
 @NgModule({

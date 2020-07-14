@@ -1,3 +1,45 @@
-<p>
-  privacy works!
-</p>
+<ion-header no-border class="ion-no-border">
+  <ion-toolbar color="primary" class="toolbar-radius">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/setting" routerDirection="forward">
+    <ion-row>
+      <ion-col class="text-center">
+        <img src="assets/private.png" alt="..." class="notification-img">
+        <div class="setting-title">
+          PRIVACIDAD
+        </div>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <div class="setting-form">
+    <br>
+    <br>
+    <div class="forgot-form">
+      <div class="forgot-img d-flex-v-center">
+        <img src="assets/forgot.png">
+      </div>
+      <div class="forgot-title">
+        ¿QUIERES CAMBIAR
+        TU CONTRASEÑA?
+      </div>
+      <br>
+      <div class="forgot-text">
+        Introduce tu email y en unos minutos
+        recibirás un correo con los pasos para
+        establecer una nueva contraseña.
+      </div>
+      <br>
+      <div class="form-group">
+        <div class="input-group">
+          <ion-icon name="mail" class="email-icon"></ion-icon>
+          <input type="email" class="form-control forgot-email" name="email"
+            placeholder="Escribe tu correo electrónico">
+        </div>
+      </div>
+      <br>
+      <button class="signin-button">ENVIAR</button>
+    </div>
+  </div>
+</ion-content>
