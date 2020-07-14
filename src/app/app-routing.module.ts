@@ -62,6 +62,20 @@ const routes: Routes = [
     loadChildren: () =>
       import("./pages/setting/help/help.module").then((m) => m.HelpPageModule),
   },
+  {
+    path: "report",
+    loadChildren: () =>
+      import("./pages/setting/report/report.module").then(
+        (m) => m.ReportPageModule
+      ),
+  },
+  {
+    path: "report-done",
+    loadChildren: () =>
+      import("./pages/setting/report-done/report-done.module").then(
+        (m) => m.ReportDonePageModule
+      ),
+  },
 ];
 
 @NgModule({

@@ -414,7 +414,7 @@ ion-row {
   padding: 10px 5px;
 }
 .notification-card-title {
-  color: #ed0000;
+  color: #ed0000 !important;
   font-family: Arial;
   font-size: 13px;
 }
@@ -443,4 +443,51 @@ ion-row {
 }
 .path-img {
   width: 8px;
+}
+.slider-group {
+  padding: 10px 0;
+}
+.slider-item {
+  width: 30vw;
+  //   height: 26vw;
+  border-radius: 10px;
+  background: #f5f5f5;
+  text-align: center;
+}
+.slider-img {
+  padding: 5px 5px 0;
+  width: 80%;
+  height: 80%;
+}
+.slider-text {
+  background: red;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 9px;
+  font-weight: 700;
+  //   line-height: 23px;
+  padding: 2px 0;
+  text-align: center;
+  letter-spacing: 0.1px;
+  border-radius: 10px;
+}
+.card-popup-img {
+  position: absolute;
+  width: 30px !important;
+  right: 7px;
+  cursor: pointer;
+}
+.divider {
+  border: solid 0.7px #ed0000;
+}
+.form-textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 4px;
+  border: solid 0.7px #ed0000;
+  border-radius: 10px;
+  font-size: 14px;
+  filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.15));
+  background-color: #ffffff;
 }

@@ -1,3 +1,73 @@
-<p>
-  report works!
-</p>
+<ion-header no-border class="ion-no-border">
+  <ion-toolbar color="primary" class="toolbar-radius">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/help" routerDirection="forward">
+    <ion-row>
+      <ion-col class="text-center">
+        <img src="assets/help.png" alt="..." class="notification-img">
+        <div class="setting-title">
+          SOPORTE
+        </div>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <div class="setting-form">
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label position="floating" class="notification-card-title">
+            CORREO ELECTRÓNICO
+          </ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row></ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label class="notification-card-title">
+          CARGADOR
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <div class="slider-group">
+      <ion-slides pager="false" [options]="BannerOption" #slideone>
+        <ion-slide>
+          <div class="slider-item">
+            <img src="assets/check.png" alt="..." class="card-popup-img">
+            <img src="assets/garaje.png" alt="..." class="slider-img">
+            <div class="slider-text">
+              DARK GARAJE B
+            </div>
+
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="slider-item">
+            <img src="assets/non-check.png" alt="..." class="card-popup-img">
+            <img src="assets/plaza.png" alt="..." class="slider-img">
+            <div class="slider-text">
+              PLUS GARAJE
+            </div>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="divider">
+    </div>
+    <br>
+    <ion-row>
+      <ion-col>
+        <ion-label class="notification-card-title">
+          EXPLICA LA INCIDENCIA
+        </ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-textarea placeholder="por favor ingrese la razón" class="form-textarea"></ion-textarea>
+    <br>
+    <br>
+    <button class="signin-button" routerLink="/report-done" routerDirection="forward">ENVIAR</button>
+  </div>
+</ion-content>
