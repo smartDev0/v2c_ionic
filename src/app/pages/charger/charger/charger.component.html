@@ -4,19 +4,76 @@
     <ion-row>
       <ion-col>
         <div class="charger-title">
-        <ion-label >
-          NUEVO CARGADOR
-        </ion-label>
+          <ion-label>
+            NUEVO CARGADOR
+          </ion-label>
         </div>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <div class="charge-input-group">
-          <input class="charger-input" type="number" placeholder="Número ID">
-          
+          <div>
+            <input class="charger-input" type="number" placeholder="Número ID">
+            <div class="infor-icon tooltip">
+              <ion-icon name="information-circle"></ion-icon>
+              <span class="tooltiptext">Es el número de identificación del cargador. Puedes encontrarlo en....</span>
+            </div>
+          </div>
+          <div>
+            <input class="charger-input" type="text" placeholder="Nombre del cargador">
+            <div class="infor-icon tooltip">
+              <ion-icon name="information-circle"></ion-icon>
+              <span class="tooltiptext">Nombra el cargador de forma que puedas identificarlo fácilmente. Por ejemplo:
+                "Dark Garaje B" o "Plus Plaza 20"</span>
+            </div>
+          </div>
         </div>
       </ion-col>
     </ion-row>
+    <br>
+    <div class="charger-slider">
+      <ion-row>
+        <ion-col>
+          <div class="slider-title">
+            <ion-label>
+              SELECCIONA EL MODELO
+            </ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <div class="slider-group">
+            <ion-slides pager="false" [options]="BannerOption" #slideone>
+              <ion-slide>
+                <div class="slider-item">
+                  <img src="assets/check.png" alt="..." class="card-popup-img">
+                  <img src="assets/garaje.png" alt="..." class="slider-img">
+                  <div class="slider-text">
+                    DARK GARAJE B
+                  </div>
+                </div>
+              </ion-slide>
+              <ion-slide>
+                <div class="slider-item">
+                  <img src="assets/non-check.png" alt="..." class="card-popup-img">
+                  <img src="assets/plaza.png" alt="..." class="slider-img">
+                  <div class="slider-text">
+                    PLUS GARAJE
+                  </div>
+                </div>
+              </ion-slide>
+            </ion-slides>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <br>
+    <br>
+    <div class="charger-action">
+<button class="signin-button" routerLink="/network" routerDirection="forward">AÑADIR CARGADOR</button>
+    </div>
+     
   </div>
 </ion-content>
