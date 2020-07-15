@@ -367,7 +367,7 @@ ion-card-header {
   width: 38px;
 }
 .setting-form {
-  padding: 40px 30px;
+  padding: 40px 40px;
 }
 .privacy {
   background: #ed0000;
@@ -734,6 +734,8 @@ ion-segment-button {
 }
 .next-arrow {
   width: 40px;
+  outline: none;
+  cursor: pointer;
 }
 .compare-img {
   text-align: center;
@@ -845,4 +847,7 @@ ion-card-header {
 }
 .wifi-icon {
   width: 30px;
+}
+.toolbar-left-radius {
+  border-bottom-left-radius: 30px;
 }

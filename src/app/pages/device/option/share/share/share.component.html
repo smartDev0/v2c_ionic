@@ -1,0 +1,41 @@
+<ion-header no-border class="ion-no-border">
+  <ion-toolbar color="primary" class="toolbar-radius">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/setting" routerDirection="forward">
+    <ion-row>
+      <ion-col class="text-center">
+        <img src="assets/share.png" alt="..." class="notification-img">
+        <div class="setting-title">
+          COMPARTIR CARGADOR
+        </div>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen>
+  <div class="setting-form">
+    <br>
+    <div class="forgot-form">
+      <div class="forgot-title">
+        ¿COMPARTES ESTE
+        CARGADOR CON
+        ALGUIEN MÁS?
+      </div>
+      <br>
+      <div class="forgot-text">
+        Introduce su email y recibirá una invitación
+        para unirse a la experiencia V2C.
+      </div>
+      <br>
+      <div class="form-group">
+        <div class="input-group">
+          <ion-icon name="mail" class="email-icon"></ion-icon>
+          <input type="email" class="form-control forgot-email" name="email"
+            placeholder="Escribe tu correo electrónico">
+        </div>
+      </div>
+      <br>
+      <button class="signin-button" routerLink="/share-done" routerDirection="forward">INVITAR</button>
+    </div>
+  </div>
+</ion-content>

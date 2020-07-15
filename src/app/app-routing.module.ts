@@ -111,6 +111,20 @@ const routes: Routes = [
         (m) => m.OptionPageModule
       ),
   },
+  {
+    path: "share",
+    loadChildren: () =>
+      import("./pages/device/option/share/share/share.module").then(
+        (m) => m.SharePageModule
+      ),
+  },
+  {
+    path: "share-done",
+    loadChildren: () =>
+      import("./pages/device/option/share/share-done/share-done.module").then(
+        (m) => m.ShareDonePageModule
+      ),
+  },
 ];
 
 @NgModule({
