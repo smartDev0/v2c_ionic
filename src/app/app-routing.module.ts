@@ -104,6 +104,13 @@ const routes: Routes = [
         (m) => m.NonConnectionPageModule
       ),
   },
+  {
+    path: "option",
+    loadChildren: () =>
+      import("./pages/device/option/option/option.module").then(
+        (m) => m.OptionPageModule
+      ),
+  },
 ];
 
 @NgModule({

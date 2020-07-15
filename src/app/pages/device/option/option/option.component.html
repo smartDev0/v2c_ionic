@@ -1,3 +1,106 @@
-<p>
-  option works!
-</p>
+<ion-content fullscreen>
+  <ion-toolbar color="primary" class="toolbar-radius">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/non-connection" routerDirection="forward">
+    <ion-row>
+      <ion-col class="text-center">
+        <img src="assets/option.png" alt="..." class="information-img">
+        <div class="option-title">
+          CONFIGURACIÓN
+        </div>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+  <div class="d-flex-v-center">
+    <ion-card mode="ios" class="configuration-card">
+      <ion-card-content style="padding: 0px;">
+        <img src="assets/delete-icon.png" alt="..." class="delete-icon">
+        <img src="assets/garaje.png" class="configuration-img">
+        <div class="configuration-card-text">
+          DARK GARAJE B
+          <img src="assets/edit.png" class="edit-img">
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="option-form">
+    <ion-row>
+      <ion-col>
+        <ion-card mode="ios" style="margin: 5px;    min-height: 166px;">
+          <ion-card-content>
+            <div class="text-center">
+              <img src="assets/id-icon.png" alt=".." class="option-img">
+              <div class="option-card-title">
+                NÚMERO ID
+              </div>
+              <ion-label class="option-card-text">
+                0586886371396
+              </ion-label>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card mode="ios" style="margin: 5px;    min-height: 166px;">
+          <ion-card-content>
+            <div class="text-center">
+              <img src="assets/limit-icon.png" alt=".." class="option-img">
+              <div class="option-card-title">
+                LÍMITE DE
+                CORRIENTE
+              </div>
+              <ion-label class="option-card-text">
+                32 Amperios
+              </ion-label>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card mode="ios" style="margin: 5px;    min-height: 166px;">
+          <ion-card-content>
+            <div class="text-center">
+              <img src="assets/home-icon.png" alt=".." class="option-img">
+              <div class="option-card-title">
+                CONTROL
+                DINÁMICO DE
+                POTENCIA
+              </div>
+              <ion-label class="option-card-text">
+                Activado
+              </ion-label>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card mode="ios" style="margin: 5px;    min-height: 166px;">
+          <ion-card-content>
+            <div class="text-center">
+              <img src="assets/cost-icon.png" alt=".." class="option-img">
+              <div class="option-card-title">
+                COSTE
+                ESTIMADO DE
+                LA ENERGÍA
+              </div>
+              <ion-label class="option-card-text">
+                0,25 €/kWh
+              </ion-label>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <br>
+    <button class="option-buttion d-flex-v-center" routerLink="/network" routerDirection="forward">
+      <img src="assets/wifi-icon.png" class="wifi-icon">
+      &nbsp;&nbsp;
+     <span> CONFIGURACIÓN WIFI</span>
+    </button>
+    <br>
+  </div>
+
+
+</ion-content>

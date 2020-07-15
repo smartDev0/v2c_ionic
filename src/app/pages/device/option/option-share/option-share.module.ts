@@ -5,12 +5,12 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { IonicModule } from "@ionic/angular";
 
-import { OptionComponent } from "./option.component";
+import { OptionShareComponent } from "./option-share.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: OptionComponent,
+    component: OptionShareComponent,
   },
 ];
 
@@ -21,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [OptionComponent],
+  declarations: [OptionShareComponent],
 })
-export class OptionPageModule {}
+export class OptionSharePageModule {}
