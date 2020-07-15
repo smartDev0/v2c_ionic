@@ -993,3 +993,26 @@ ion-card-header {
   outline: none;
   width: 100%;
 }
+.timer-card {
+  background-color: white;
+}
+.timer-card-header {
+  background: #ed0000;
+  color: white;
+  box-shadow: 0px 20px 75px rgba(221, 221, 221, 0.55);
+  border-radius: 8px;
+}
+.timer-card-text {
+  color: #474747;
+  font-family: "Segoe UI";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.close-img {
+  position: absolute;
+  right: 5px;
+  width: 26px;
+  cursor: pointer;
+  outline: none;
+}
