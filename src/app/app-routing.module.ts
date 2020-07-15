@@ -125,6 +125,13 @@ const routes: Routes = [
         (m) => m.ShareDonePageModule
       ),
   },
+  {
+    path: "option-limit",
+    loadChildren: () =>
+      import("./pages/device/option/option-limit/option-limit.module").then(
+        (m) => m.OptionLimitPageModule
+      ),
+  },
 ];
 
 @NgModule({

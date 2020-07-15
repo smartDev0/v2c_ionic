@@ -1,3 +1,63 @@
-<p>
-  option-limit works!
-</p>
+<ion-content fullscreen>
+  <ion-toolbar color="primary" class="toolbar-radius">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/option" routerDirection="forward">
+    <ion-row>
+      <ion-col class="text-center">
+        <img src="assets/limit.png" alt="..." class="information-img">
+        <div class="option-title">
+          LÍMITE DE CORRIENTE
+        </div>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+  <div class="option-form">
+    <ion-row>
+      <ion-col>
+        <ion-card mode="ios" class="limit-card">
+          <ion-card-content>
+            <div class="limit-card-title">
+              INTENSIDAD MÍNIMA DE CARGA
+            </div>
+            <ion-range min="0" max="2000" step="100" value="1400" snaps pin color="">
+            </ion-range>
+            <div class="limit-card-text">
+              11 AMPERIOS
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card mode="ios" class="limit-card">
+          <ion-card-content>
+            <div class="limit-card-title">
+              INTENSIDAD MÁXIMA DE CARGA
+            </div>
+            <ion-range min="0" max="2000" step="100" value="1800" snaps pin color="">
+            </ion-range>
+            <div class="limit-card-text">
+             32 AMPERIOS
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button class="signin-button" routerLink="/option" routerDirection="forward">GUARDAR</button>
+      </ion-col>
+    </ion-row>
+    <br>
+    <ion-row>
+      <ion-col class="text-center">
+        <ion-label class="optoin-limit-text">
+          * En función de tu cargador, la intensidad
+máxima seleccionable será 20 o 32 Amperios.
+        </ion-label>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>
