@@ -174,6 +174,13 @@ const routes: Routes = [
         "./pages/device/program/program-report/program-report.module"
       ).then((m) => m.ProgramReportPageModule),
   },
+  {
+    path: "statistics-card",
+    loadChildren: () =>
+      import("./pages/device/statistics-card/statistics-card.module").then(
+        (m) => m.StatisticsCardPageModule
+      ),
+  },
 ];
 
 @NgModule({

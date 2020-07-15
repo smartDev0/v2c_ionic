@@ -51,7 +51,7 @@
         </ion-row>
       </div>
     </div>
-    <ion-card class="alert-card" mode="ios"  routerLink="/connection" routerDirection="forward">
+    <ion-card class="alert-card" mode="ios" routerLink="/connection" routerDirection="forward">
       <ion-card-content>
         <ion-row>
           <ion-col>
@@ -115,24 +115,25 @@
             </ion-label>
           </ion-col>
         </ion-row>
-        <ion-row></ion-row>
-        <ion-segment mode="ios" (ionChange)="segmentChanged($event)" class="segment-ion">
-          <ion-segment-button value="hoy">
-            <ion-label>Hoy</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="ayer">
-            <ion-label>Ayer</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="week">
-            <ion-label>7 días</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="mes">
-            <ion-label>Mes</ion-label>
-          </ion-segment-button>
-          <ion-segment-button value="3mes">
-            <ion-label>3 Meses</ion-label>
-          </ion-segment-button>
-        </ion-segment>
+        <ion-toolbar>
+          <ion-segment mode="ios" (ionChange)="segmentChanged($event)" class="segment-ion">
+            <ion-segment-button value="hoy">
+              <ion-label>Hoy</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="ayer">
+              <ion-label>Ayer</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="week">
+              <ion-label>7 días</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="mes">
+              <ion-label>Mes</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="3mes">
+              <ion-label>3 Meses</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-toolbar>
       </ion-card-content>
     </ion-card>
     <ion-card class="compare-card" mode="ios">
@@ -148,7 +149,7 @@
                 </div>
               </div>
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <img src="assets/next-arrow.png" class="next-arrow"  routerLink="/share" routerDirection="forward">
+              <img src="assets/next-arrow.png" class="next-arrow" routerLink="/share" routerDirection="forward">
             </div>
           </ion-col>
         </ion-row>
