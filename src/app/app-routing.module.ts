@@ -132,6 +132,13 @@ const routes: Routes = [
         (m) => m.OptionLimitPageModule
       ),
   },
+  {
+    path: "protect",
+    loadChildren: () =>
+      import("./pages/device/option/protect/protect.module").then(
+        (m) => m.ProtectPageModule
+      ),
+  },
 ];
 
 @NgModule({
