@@ -14,7 +14,7 @@
   <div class="d-flex-v-center">
     <ion-card mode="ios" class="configuration-card">
       <ion-card-content style="padding: 0px;">
-        <img src="assets/delete-icon.png" alt="..." class="delete-icon">
+        <img src="assets/delete-icon.png" alt="..." class="delete-icon" routerLink="/remove" routerDirection="forward">
         <img src="assets/garaje.png" class="configuration-img">
         <div class="configuration-card-text">
           DARK GARAJE B
@@ -45,11 +45,11 @@
           <ion-card-content>
             <div class="text-center">
               <a routerLink="/option-limit" routerDirection="forward">
-              <img src="assets/limit-icon.png" alt=".." class="option-img">
-              <div class="option-card-title">
-                LÍMITE DE
-                CORRIENTE
-              </div>
+                <img src="assets/limit-icon.png" alt=".." class="option-img">
+                <div class="option-card-title">
+                  LÍMITE DE
+                  CORRIENTE
+                </div>
               </a>
               <ion-label class="option-card-text">
                 32 Amperios
@@ -65,7 +65,7 @@
           <ion-card-content>
             <div class="text-center">
               <a routerLink="/protect" routerDirection="forward">
-              <img src="assets/home-icon.png" alt=".." class="option-img">
+                <img src="assets/home-icon.png" alt=".." class="option-img">
               </a>
               <div class="option-card-title">
                 CONTROL
@@ -101,7 +101,7 @@
     <button class="option-buttion d-flex-v-center" routerLink="/network" routerDirection="forward">
       <img src="assets/wifi-icon.png" class="wifi-icon">
       &nbsp;&nbsp;
-     <span> CONFIGURACIÓN WIFI</span>
+      <span> CONFIGURACIÓN WIFI</span>
     </button>
     <br>
   </div>

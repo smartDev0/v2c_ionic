@@ -139,6 +139,20 @@ const routes: Routes = [
         (m) => m.ProtectPageModule
       ),
   },
+  {
+    path: "remove",
+    loadChildren: () =>
+      import("./pages/device/option/remove-confirm/remove-confirm.module").then(
+        (m) => m.RemoveConfirmPageModule
+      ),
+  },
+  {
+    path: "remove-done",
+    loadChildren: () =>
+      import("./pages/device/option/remove-done/remove-done.module").then(
+        (m) => m.RemoveDonePageModule
+      ),
+  },
 ];
 
 @NgModule({
