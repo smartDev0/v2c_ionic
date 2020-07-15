@@ -105,6 +105,13 @@ const routes: Routes = [
       ),
   },
   {
+    path: "connection",
+    loadChildren: () =>
+      import("./pages/device/connection/connection.module").then(
+        (m) => m.ConnectionPageModule
+      ),
+  },
+  {
     path: "option",
     loadChildren: () =>
       import("./pages/device/option/option/option.module").then(

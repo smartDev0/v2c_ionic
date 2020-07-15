@@ -13,13 +13,15 @@
     </ion-row>
   </ion-toolbar>
   <div class="connection">
-    <ion-card style="margin-top: -45px;z-index: 10;" mode="ios">
+    <ion-card style="margin-top: -45px;z-index: 10;  background: #658399;
+  box-shadow: 0px 20px 75px rgba(221,221,221,0.55);" mode="ios">
       <ion-card-content>
         <ion-row>
           <ion-col class="text-center">
-            <ion-label>
-              SIN CONEXIÓN
-            </ion-label>
+            <div class="ampere-value white">20</div>
+            <div class="ampere-text white" >
+              AMPERIOS
+            </div>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -46,21 +48,21 @@
           <ion-col class="d-flex-v-center">
             <div class="control-img" routerLink="/program" routerDirection="forward">
               <img src="assets/program.png" alt="...">
+              <img src="assets/sub-notification.png" alt="..." class="sub-notification">
             </div>
           </ion-col>
         </ion-row>
       </div>
     </div>
-    <ion-card class="alert-card" mode="ios"  routerLink="/connection" routerDirection="forward">
+    <ion-card class="alert-card" mode="ios" style="background: #658399;
+  box-shadow: 0px 20px 75px rgba(221,221,221,0.55);">
       <ion-card-content>
         <ion-row>
           <ion-col>
             <div class="d-flex-v-center">
-              <img src="assets/bluetooth.png" alt="..." class="alert-img">
-              <ion-label class="alert-text">
-                ACTIVA EL BLUETOOTH O CONÉCTATE VÍA WIFI CON EL PUNTO DE RECARGA PARA ESTABLECER CONEXIÓN
+              <ion-label class="white">
+               VEHÍCULO CONECTADO 
               </ion-label>
-              <img src="assets/wifi.png" alt="..." class="alert-img">
             </div>
           </ion-col>
         </ion-row>
@@ -148,12 +150,11 @@
                 </div>
               </div>
               &nbsp;&nbsp;&nbsp;&nbsp;
-              <img src="assets/next-arrow.png" class="next-arrow"  routerLink="/share" routerDirection="forward">
+              <img src="assets/next-arrow.png" class="next-arrow" routerLink="/share" routerDirection="forward">
             </div>
           </ion-col>
         </ion-row>
       </ion-card-content>
     </ion-card>
   </div>
-
 </ion-content>
