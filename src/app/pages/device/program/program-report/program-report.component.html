@@ -1,0 +1,54 @@
+<ion-content fullscreen>
+  <ion-toolbar color="primary" class="toolbar-radius">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/non-connection" routerDirection="forward">
+    <img src="assets/option.png" alt="..." class="option-icon" routerLink="/option" routerDirection="forward">
+    <ion-row>
+      <ion-col>
+        <div class="device-title">
+          Dark Garaje B
+        </div>
+        <br>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+  <div class="connection">
+    <ion-card style="margin-top: -45px;z-index: 10;" mode="ios">
+      <ion-card-content>
+        <ion-row>
+          <ion-col class="text-center">
+            <div class="ampere-value">20</div>
+            <div class="ampere-text">
+              AMPERIOS
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-range min="0" max="2000" step="100" value="1400" snaps pin color="primary">
+            </ion-range>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+    <ion-card mode="ios" class="program-card">
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <div class="text-center">
+              <img src="assets/program.png" class="program-icon">
+              <div class="program-card-title">
+                PROGRAMA LA CARGA
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</ion-content>

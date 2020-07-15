@@ -1,0 +1,199 @@
+<ion-content fullscreen>
+  <ion-toolbar color="primary" class="toolbar-radius">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/non-connection" routerDirection="forward">
+    <img src="assets/option.png" alt="..." class="option-icon" routerLink="/option" routerDirection="forward">
+    <ion-row>
+      <ion-col>
+        <div class="device-title">
+          Dark Garaje B
+        </div>
+        <br>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+  <div class="connection">
+    <ion-card style="margin-top: -45px;z-index: 10;" mode="ios">
+      <ion-card-content>
+        <ion-row>
+          <ion-col class="text-center">
+            <div class="ampere-value">20</div>
+            <div class="ampere-text">
+              AMPERIOS
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-range min="0" max="2000" step="100" value="1400" snaps pin color="primary">
+            </ion-range>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+    <ion-card mode="ios" class="program-card">
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <div class="text-center">
+              <img src="assets/program.png" class="program-icon">
+              <div class="program-card-title">
+                PROGRAMA LA CARGA
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-toolbar>
+          <ion-segment value="1" style="background: red;" (ionChange)="segmentChanged($event.target.value)">
+            <ion-segment-button value="1">
+              <ion-label>TEMPORIZADOR 1</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="2">
+              <ion-label>TEMPORIZADOR 2</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </ion-toolbar>
+        <div [ngSwitch]="segment">
+          <div *ngSwitchCase="1">
+            <ion-row>
+              <ion-col class="d-flex-v-center">
+                <div class="isNonActive-div d-flex-v-center">
+                  L
+                </div>
+                <div class="isNonActive-div d-flex-v-center">
+                  M
+                </div>
+                <div class="isActive-div d-flex-v-center">
+                  X
+                </div>
+                <div class="isNonActive-div d-flex-v-center">
+                  J
+                </div>
+                <div class="isNonActive-div d-flex-v-center">
+                  V
+                </div>
+                <div class="isNonActive-div d-flex-v-center">
+                  S
+                </div>
+                <div class="isNonActive-div d-flex-v-center">
+                  D
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="timer-group text-center">
+                  <ion-label>
+                    INICIO
+                  </ion-label>
+                  <div class="d-flex-v-center">
+                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input">
+                    :
+                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input">
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="timer-group text-center">
+                  <ion-label>
+                    FIN
+                  </ion-label>
+                  <div class="d-flex-v-center">
+                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input">
+                    :
+                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input">
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+            <br>
+            <div class="text-center">
+            <button class="add-button" routerLink="/program-report" routerDirection="forward">AÑADIR</button>
+            </div>
+            <br>
+            <button class="card-button" routerLink="/program-report" routerDirection="forward">
+              VER CARGAS PROGRAMADAS
+            </button>
+          </div>
+          <div *ngSwitchCase="2">
+            <ion-row>
+              <ion-col class="d-flex-v-center">
+                <div class="isActive-div d-flex-v-center">
+                  L
+                </div>
+                <div class="isNonActive-div d-flex-v-center">
+                  M
+                </div>
+                <div class="isActive-div d-flex-v-center">
+                  X
+                </div>
+                <div class="isNonActive-div d-flex-v-center">
+                  J
+                </div>
+                <div class="isNonActive-div d-flex-v-center">
+                  V
+                </div>
+                <div class="isNonActive-div d-flex-v-center">
+                  S
+                </div>
+                <div class="isNonActive-div d-flex-v-center">
+                  D
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="timer-group text-center">
+                  <ion-label>
+                    INICIO
+                  </ion-label>
+                  <div class="d-flex-v-center">
+                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input">
+                    :
+                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input">
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="timer-group text-center">
+                  <ion-label>
+                    FIN
+                  </ion-label>
+                  <div class="d-flex-v-center">
+                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input">
+                    :
+                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input">
+                  </div>
+                </div>
+              </ion-col>
+            </ion-row>
+            <br>
+            <div class="text-center">
+            <button class="add-button" routerLink="/program-report" routerDirection="forward">AÑADIR</button>
+            </div>
+            <br>
+            <button class="card-button" routerLink="/program-report" routerDirection="forward">
+              VER CARGAS PROGRAMADAS
+            </button>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+</ion-content>

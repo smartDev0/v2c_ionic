@@ -153,6 +153,20 @@ const routes: Routes = [
         (m) => m.RemoveDonePageModule
       ),
   },
+  {
+    path: "program",
+    loadChildren: () =>
+      import(
+        "./pages/device/program/program-control/program-control.module"
+      ).then((m) => m.ProgramControlPageModule),
+  },
+  {
+    path: "program-report",
+    loadChildren: () =>
+      import(
+        "./pages/device/program/program-report/program-report.module"
+      ).then((m) => m.ProgramReportPageModule),
+  },
 ];
 
 @NgModule({
