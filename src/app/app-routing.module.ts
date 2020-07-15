@@ -97,6 +97,13 @@ const routes: Routes = [
         (m) => m.NetworkDonePageModule
       ),
   },
+  {
+    path: "non-connection",
+    loadChildren: () =>
+      import("./pages/device/non-connection/non-connection.module").then(
+        (m) => m.NonConnectionPageModule
+      ),
+  },
 ];
 
 @NgModule({

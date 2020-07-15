@@ -1,0 +1,159 @@
+<ion-content fullscreen>
+  <ion-toolbar color="primary" class="toolbar-radius">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/home" routerDirection="forward">
+    <img src="assets/option.png" alt="..." class="option-icon" routerLink="/setting" routerDirection="forward">
+    <ion-row>
+      <ion-col>
+        <div class="device-title">
+          Dark Garaje B
+        </div>
+        <br>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+  <div class="connection">
+    <ion-card style="margin-top: -45px;z-index: 10;" mode="ios">
+      <ion-card-content>
+        <ion-row>
+          <ion-col class="text-center">
+            <ion-label>
+              SIN CONEXIÓN
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-range min="0" max="2000" step="100" value="1400" snaps pin color="primary">
+            </ion-range>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+    <div class="d-flex-v-center">
+      <div class="control">
+        <ion-row>
+          <ion-col class="d-flex-v-center">
+            <div class="control-img ">
+              <img src="assets/lock.png" alt="...">
+            </div>
+          </ion-col>
+          <ion-col class="d-flex-v-center border-div">
+            <div class="control-img ">
+              <img src="assets/out.png" alt="...">
+            </div>
+          </ion-col>
+          <ion-col class="d-flex-v-center">
+            <div class="control-img ">
+              <img src="assets/program.png" alt="...">
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <ion-card class="alert-card" mode="ios">
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <div class="d-flex-v-center">
+              <img src="assets/bluetooth.png" alt="..." class="alert-img">
+              <ion-label class="alert-text">
+                ACTIVA EL BLUETOOTH O CONÉCTATE VÍA WIFI CON EL PUNTO DE RECARGA PARA ESTABLECER CONEXIÓN
+              </ion-label>
+              <img src="assets/wifi.png" alt="..." class="alert-img">
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="staticstics-card" mode="ios">
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <div class="staticstics-card-header">
+              <img src="assets/statistics.png" alt="..">
+              &nbsp;&nbsp;
+              <ion-label class="staticstics-card-title">
+                ESTADÍSTICAS
+              </ion-label>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="text-center">
+            <ion-label class="staticstics-card-text">
+              14h 0m 0s
+              <div>
+                TIEMPO TOTAL
+              </div>
+            </ion-label>
+          </ion-col>
+          <ion-col class="text-center">
+            <ion-label class="staticstics-card-text">
+              20.2kW
+              <div>
+                POTENCIA MÁXIMA
+              </div>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="text-center">
+            <ion-label class="staticstics-card-text">
+              3,20€
+              <div>
+                COSTE TOTAL
+              </div>
+            </ion-label>
+          </ion-col>
+          <ion-col class="text-center">
+            <ion-label class="staticstics-card-text">
+              8.29kWh
+              <div>
+                ENERGÍA TOTAL
+              </div>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row></ion-row>
+        <ion-segment mode="ios" (ionChange)="segmentChanged($event)" class="segment-ion">
+          <ion-segment-button value="hoy">
+            <ion-label>Hoy</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="ayer">
+            <ion-label>Ayer</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="week">
+            <ion-label>7 días</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="mes">
+            <ion-label>Mes</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="3mes">
+            <ion-label>3 Meses</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="compare-card" mode="ios">
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <div class="d-flex-v-space">
+              <div class="compare-img">
+                <img src="assets/compare.png" alt="...">
+                <div class="share-card-text">
+                  ¿COMPARTES ESTE CARGADOR
+                  CON MÁS PERSONAS?
+                </div>
+              </div>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <img src="assets/next-arrow.png" class="next-arrow">
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>
