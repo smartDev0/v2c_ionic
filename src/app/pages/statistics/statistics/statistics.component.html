@@ -1,0 +1,59 @@
+<ion-content fullscreen>
+  <ion-toolbar color="primary" class="toolbar-radius">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/home" routerDirection="forward">
+    <ion-row>
+      <ion-col class="text-center">
+        <img src="assets/statistics-logo.png" alt="..." class="information-img">
+        <div class="option-title">
+          ESTADÍSTICAS
+          TOTAL DE CARGADORES
+        </div>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+
+  <ion-card style="margin-top: -20px;z-index: 10;" mode="ios">
+    <ion-card-content>
+      <ion-toolbar mode="md">
+        <ion-segment value="1">
+          <ion-segment-button value="1">
+            <ion-icon name="flash" mode="ios"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="2">
+            <ion-icon name="time" mode="ios"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="3">
+            <ion-icon name="logo-euro" mode="ios"></ion-icon>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+    </ion-card-content>
+  </ion-card>
+  <ion-row>
+    <ion-col>
+      <div class="d-flex-v-center">
+        <ion-label class="dater-text">
+          DESDE
+        </ion-label>
+        &nbsp;
+        &nbsp;
+        <ion-datetime class="datetime-ion" value="{{today | date}}" placeholder="Select Date" mode="ios"></ion-datetime>
+        <img src="assets/calendar.png" alt="" class="calendar-icon">
+      </div>
+    </ion-col>
+  </ion-row>
+   <ion-row>
+    <ion-col>
+      <div class="d-flex-v-center">
+        <ion-label class="dater-text">
+          HASTA
+        </ion-label>
+        &nbsp;
+        &nbsp;
+        <ion-datetime class="datetime-ion" value="{{today | date}}" placeholder="Select Date" mode="ios"></ion-datetime>
+        <img src="assets/calendar.png" alt="" class="calendar-icon">
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-content>

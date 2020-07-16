@@ -766,8 +766,9 @@ ion-card-header {
   font-family: Arial;
   font-size: 18px;
   font-weight: 400;
-  line-height: 40px;
+  // line-height: 40px;
   text-align: center;
+  padding: 7px 20px;
 }
 .information-img {
   height: 50px;
@@ -1033,4 +1034,27 @@ ion-card-header {
   margin-top: -33px;
   outline: none;
   cursor: pointer;
+}
+.dater-text {
+  color: #494949;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 32px;
+}
+.datetime-ion {
+  background: #ffffff;
+  box-shadow: 0px 20px 75px rgba(88, 86, 86, 0.55);
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 8px;
+  // line-height: 32px;
+  padding: 5px 30px 5px 8px;
+}
+.calendar-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 11;
+  margin-left: 70px;
 }

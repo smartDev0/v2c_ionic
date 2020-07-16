@@ -181,6 +181,13 @@ const routes: Routes = [
         (m) => m.StatisticsCardPageModule
       ),
   },
+  {
+    path: "statistics",
+    loadChildren: () =>
+      import("./pages/statistics/statistics/statistics.module").then(
+        (m) => m.StatisticsPageModule
+      ),
+  },
 ];
 
 @NgModule({
