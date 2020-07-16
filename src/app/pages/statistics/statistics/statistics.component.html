@@ -16,7 +16,7 @@
   <ion-card style="margin-top: -20px;z-index: 10;" mode="ios">
     <ion-card-content>
       <ion-toolbar mode="md">
-        <ion-segment value="1">
+        <ion-segment value="1" (ionChange)="segmentChanged($event)">
           <ion-segment-button value="1">
             <ion-icon name="flash" mode="ios"></ion-icon>
           </ion-segment-button>
@@ -43,7 +43,7 @@
       </div>
     </ion-col>
   </ion-row>
-   <ion-row>
+  <ion-row>
     <ion-col>
       <div class="d-flex-v-center">
         <ion-label class="dater-text">
@@ -56,15 +56,46 @@
       </div>
     </ion-col>
   </ion-row>
-  <ion-row>
-    <ion-col>
-      <canvas #lineCanvas></canvas>
-    </ion-col>
-  </ion-row>
-  <div class="text-center">
-   <span class="chart-total">
- TOTAL: 206 kWh
-   </span>
+  <div [ngSwitch]="segment">
+    <div *ngSwitchCase="1">
+      <ion-row>
+        <ion-col>
+          <canvas #lineCanvas></canvas>
+        </ion-col>
+      </ion-row>
+      <div class="text-center">
+        <span class="chart-total">
+          TOTAL: 206 kWh
+        </span>
+      </div>
+    </div>
+    <div *ngSwitchCase="2">
+      <ion-row>
+        <ion-col>
+          <canvas #lineCanvasTimer></canvas>
+        </ion-col>
+      </ion-row>
+      <div class="text-center">
+        <span class="chart-total">
+          TOTAL: 206 h43m
+        </span>
+      </div>
+    </div>
+    <div *ngSwitchCase="3">
+      <ion-row>
+        <ion-col>
+          <canvas #lineCanvasEuro></canvas>
+        </ion-col>
+      </ion-row>
+      <div class="text-center">
+        <span class="chart-total">
+          TOTAL: 42,89 €
+        </span>
+      </div>
+    </div>
   </div>
-  
+  <canvas #lineCanvas style="display: none;"></canvas>
+  <canvas #lineCanvasTimer style="display: none;"></canvas>
+  <canvas #lineCanvasEuro style="display: none;"></canvas>
+
 </ion-content>
