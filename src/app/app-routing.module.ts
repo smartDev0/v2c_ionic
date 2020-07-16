@@ -174,6 +174,14 @@ const routes: Routes = [
         "./pages/device/program/program-report/program-report.module"
       ).then((m) => m.ProgramReportPageModule),
   },
+
+  {
+    path: "statistics",
+    loadChildren: () =>
+      import("./pages/statistics/statistics/statistics.module").then(
+        (m) => m.StatisticsPageModule
+      ),
+  },
   {
     path: "statistics-card",
     loadChildren: () =>
@@ -182,10 +190,10 @@ const routes: Routes = [
       ),
   },
   {
-    path: "statistics",
+    path: "statistics-graph",
     loadChildren: () =>
-      import("./pages/statistics/statistics/statistics.module").then(
-        (m) => m.StatisticsPageModule
+      import("./pages/device/statistics-graph/statistics-graph.module").then(
+        (m) => m.StatisticsGraphPageModule
       ),
   },
 ];

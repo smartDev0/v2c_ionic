@@ -1,3 +1,214 @@
-<p>
-  statistics-graph works!
-</p>
+<ion-content fullscreen>
+  <ion-toolbar color="primary" class="toolbar-radius">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/option" routerDirection="forward">
+    <ion-row>
+      <ion-col class="text-center">
+        <img src="assets/statistics-logo.png" alt="..." class="information-img">
+        <div class="option-title">
+          ESTADÍSTICAS
+        </div>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+
+  <ion-card style="margin-top: -20px;z-index: 10;" mode="ios">
+    <ion-card-content>
+      <ion-toolbar mode="md">
+        <ion-segment value="1" (ionChange)="segmentChanged($event)">
+          <ion-segment-button value="1">
+            <ion-icon name="flash" mode="ios"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="2">
+            <ion-icon name="time" mode="ios"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="3">
+            <ion-icon name="logo-euro" mode="ios"></ion-icon>
+          </ion-segment-button>
+          <ion-segment-button value="4">
+            <ion-icon name="menu" mode="ios"></ion-icon>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+    </ion-card-content>
+  </ion-card>
+  <ion-row>
+    <ion-col>
+      <div class="d-flex-v-center">
+        <ion-label class="dater-text">
+          DESDE
+        </ion-label>
+        &nbsp;
+        &nbsp;
+        <ion-datetime class="datetime-ion" value="{{today | date}}" placeholder="Select Date" mode="ios"></ion-datetime>
+        <img src="assets/calendar.png" alt="" class="calendar-icon">
+      </div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div class="d-flex-v-center">
+        <ion-label class="dater-text">
+          HASTA
+        </ion-label>
+        &nbsp;
+        &nbsp;
+        <ion-datetime class="datetime-ion" value="{{today | date}}" placeholder="Select Date" mode="ios"></ion-datetime>
+        <img src="assets/calendar.png" alt="" class="calendar-icon">
+      </div>
+    </ion-col>
+  </ion-row>
+  <div [ngSwitch]="segment">
+    <div *ngSwitchCase="1">
+      <ion-row>
+        <ion-col>
+          <canvas #lineCanvas></canvas>
+        </ion-col>
+      </ion-row>
+      <div class="text-center">
+        <span class="chart-total">
+          TOTAL: 206 kWh
+        </span>
+      </div>
+    </div>
+    <div *ngSwitchCase="2">
+      <ion-row>
+        <ion-col>
+          <canvas #lineCanvasTimer></canvas>
+        </ion-col>
+      </ion-row>
+      <div class="text-center">
+        <span class="chart-total">
+          TOTAL: 206 h43m
+        </span>
+      </div>
+    </div>
+    <div *ngSwitchCase="3">
+      <ion-row>
+        <ion-col>
+          <canvas #lineCanvasEuro></canvas>
+        </ion-col>
+      </ion-row>
+      <div class="text-center">
+        <span class="chart-total">
+          TOTAL: 42,89 €
+        </span>
+      </div>
+    </div>
+    <div *ngSwitchCase="4">
+      <ion-card mode="ios">
+        <ion-card-content style="padding: 0px;">
+          <ion-row>
+            <ion-col>
+              <div class="history-title">
+                INICIO 12/05/2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11:25
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="d-flex-v-center">
+                <div class="history-text">
+                  <small>TIEMPO</small>: <b>9h 21m</b>
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="history-text">
+                 <small>ENERGÍA</small> : <b>10.3kWh</b>
+                </div>
+              </div>
+              <div class="sum-value">
+                3,12€
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+      <ion-card mode="ios">
+        <ion-card-content style="padding: 0px;">
+          <ion-row>
+            <ion-col>
+              <div class="history-title">
+                INICIO 12/05/2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11:25
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="d-flex-v-center">
+                <div class="history-text">
+                  <small>TIEMPO</small>: <b>9h 21m</b>
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="history-text">
+                 <small>ENERGÍA</small> : <b>10.3kWh</b>
+                </div>
+              </div>
+              <div class="sum-value">
+                3,12€
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+      <ion-card mode="ios">
+        <ion-card-content style="padding: 0px;">
+          <ion-row>
+            <ion-col>
+              <div class="history-title">
+                INICIO 12/05/2020&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11:25
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="d-flex-v-center">
+                <div class="history-text">
+                  <small>TIEMPO</small>: <b>9h 21m</b>
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="history-text">
+                 <small>ENERGÍA</small> : <b>10.3kWh</b>
+                </div>
+              </div>
+              <div class="sum-value">
+                3,12€
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+      <div class="d-flex-v-center">
+        <div class="border-divider"></div>
+        <div>TOTAL</div>
+        <div class="border-divider"></div>
+      </div>
+      <ion-card mode="ios" style="  background: #ed0000;
+  box-shadow: 0px 20px 75px rgba(221,221,221,0.55);">
+        <ion-card-content>
+          <ion-row>
+            <ion-col class="text-center">
+              <div class="total-value-text"><strong>6</strong></div>
+              <div class="total-value-text"><small>SESIONES</small></div>
+            </ion-col>
+            <ion-col class="text-center">
+              <div class="total-value-text"><strong>36h 21m</strong></div>
+              <div class="total-value-text"><small>TIEMPO</small></div>
+            </ion-col>
+            <ion-col class="text-center">
+              <div class="total-value-text"><strong>54.3kWh</strong></div>
+              <div class="total-value-text"><small>ENERGÍA</small></div>
+            </ion-col>
+            <ion-col class="text-center">
+              <div class="total-value-text"><strong>9,42 €</strong></div>
+              <div class="total-value-text"><small>COSTE</small></div>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <canvas #lineCanvas style="display: none;"></canvas>
+  <canvas #lineCanvasTimer style="display: none;"></canvas>
+  <canvas #lineCanvasEuro style="display: none;"></canvas>
+
+</ion-content>

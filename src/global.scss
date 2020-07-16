@@ -1018,7 +1018,7 @@ ion-card-header {
   outline: none;
 }
 .white {
-  color: white;
+  color: white !important;
 }
 .sub-notification {
   width: 16px !important;
@@ -1067,4 +1067,47 @@ ion-card-header {
   font-weight: 500;
   padding: 3px 10px;
   border-radius: 10px;
+}
+.history-title {
+  color: #ed0000;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 26px;
+  padding: 0 10px;
+}
+.history-text {
+  color: #494949;
+  font-family: Arial;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.vertical-divider {
+  border: solid 1px #ed0000;
+  margin: 0 6px;
+  height: 13px;
+}
+.sum-value {
+  background: #ed0000;
+  position: absolute;
+  right: 0px;
+  top: -35px;
+  width: 100px;
+  color: white;
+  border-bottom-left-radius: 34px;
+  padding: 2px 3px;
+  text-align: center;
+  font-size: 13px;
+  border-left: 20px solid transparent;
+}
+.border-divider {
+  border: 1px solid grey;
+  width: 100%;
+}
+.total-value-text {
+  color: #ffffff;
+  font-family: "Segoe UI";
+  font-size: 12px;
+  font-weight: 500;
 }
