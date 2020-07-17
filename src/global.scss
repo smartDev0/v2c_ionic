@@ -637,7 +637,7 @@ ion-row {
   font-size: 18px;
   font-weight: 500;
   line-height: 67px;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 .connection {
   padding: 0px 10px;
@@ -671,10 +671,11 @@ ion-row {
   border-left: 1px solid red;
 }
 .alert-card {
-  background: radial-gradient(circle, #1c62cb, #75cae0, #7acfe2, #8b8b8b);
+  background: radial-gradient(circle, #86abe3, #2ab2d4, #42b5cf, #3bb3ea);
   box-shadow: 0px 20px 75px rgba(221, 221, 221, 0.55);
   margin-top: 5px;
 }
+
 .alert-img {
   width: 30px;
   height: 30px;
@@ -725,11 +726,17 @@ ion-row {
 .segment-ion {
   background: #de0404;
   box-shadow: 0px 20px 75px rgba(221, 221, 221, 0.55);
-  color: black;
+  color: white;
+}
+.segment-button-checked {
+  background: #fff;
+  color: var(--ion-color-dark);
+  // border-bottom: 3px solid var(--ion-color-primary);
 }
 ion-segment-button {
-  // color: white;
+  color: white;
   font-size: 10px;
+  min-width: 60px;
 }
 .share-card-text {
   color: #474747;
@@ -783,7 +790,7 @@ ion-card-header {
   width: 50px;
 }
 .configuration-card {
-  margin-top: -25px;
+  margin-top: -15px;
   z-index: 15;
 }
 .configuration-card ion-card-content {
@@ -914,7 +921,7 @@ ion-card-header {
 .ampere-value {
   color: #474747;
   font-family: Arial;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
   // line-height: 110px;
   text-align: center;
@@ -1118,4 +1125,10 @@ ion-card-header {
   font-family: "Segoe UI";
   font-size: 13px;
   font-weight: 500;
+}
+.cost-icon {
+  position: absolute;
+  width: 30px;
+  /* margin-left: 0px; */
+  margin-top: -5px;
 }
