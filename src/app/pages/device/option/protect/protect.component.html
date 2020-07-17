@@ -12,62 +12,53 @@
     </ion-row>
   </ion-toolbar>
   <div class="option-form">
-    <ion-row>
-      <ion-col>
-        <ion-card mode="ios">
-          <ion-card-content>
-            <div class="active-text">
-              ACTIVA O DESACTIVA EL
-              CONTROL DINÁMICO DE POTENCIA *
-            </div>
-            <br>
-            <div class="text-center">
-              <ion-toggle slot="start" name="active" (ionChange)="onChnageToggle($event)"></ion-toggle>
-            </div>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        <ion-card mode="ios" class="limit-card" *ngIf="isActive">
-          <ion-card-content>
+
+    <ion-card mode="ios">
+      <ion-card-content>
+        <div class="active-text">
+          ACTIVA O DESACTIVA EL
+          CONTROL DINÁMICO DE POTENCIA *
+        </div>
+        <br>
+        <div class="text-center">
+          <ion-toggle slot="start" name="active" (ionChange)="onChnageToggle($event)"></ion-toggle>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card mode="ios" class="limit-card" *ngIf="isActive">
+      <ion-card-content>
+        <ion-radio-group value="grape" mode="md">
+          <ion-item class="ion-item" no-lines lines="none">
+            <ion-label class="protect-card-text">Monofásica</ion-label>
+            <ion-radio slot="start" color="primary" value="Monofásica"></ion-radio>
+          </ion-item>
+          <ion-item class="ion-item" no-lines lines="none">
+            <ion-label class="protect-card-text">Monofásica</ion-label>
+            <ion-radio slot="start" color="primary" value="Trifásica"></ion-radio>
+          </ion-item>
+          <ion-item class="ion-item" no-lines lines="none">
+            <ion-label class="protect-card-text">Fotovoltaica</ion-label>
+            <ion-radio slot="start" color="primary" value="Fotovoltaica"></ion-radio>
+          </ion-item>
+          <ion-item class="ion-item" no-lines lines="none">
             <ion-radio-group value="grape" mode="md">
               <ion-item class="ion-item" no-lines lines="none">
-                <ion-label class="protect-card-text">Monofásica</ion-label>
-                <ion-radio slot="start" color="primary" value="Monofásica"></ion-radio>
+                <ion-label class="protect-card-text">FV Exclusivo</ion-label>
+                <ion-radio slot="start" color="primary" value="Exclusivo"></ion-radio>
               </ion-item>
               <ion-item class="ion-item" no-lines lines="none">
-                <ion-label class="protect-card-text">Monofásica</ion-label>
-                <ion-radio slot="start" color="primary" value="Trifásica"></ion-radio>
+                <ion-label class="protect-card-text">FV + Mínima potencia</ion-label>
+                <ion-radio slot="start" color="primary" value="potencia"></ion-radio>
               </ion-item>
               <ion-item class="ion-item" no-lines lines="none">
-                <ion-label class="protect-card-text">Fotovoltaica</ion-label>
-                <ion-radio slot="start" color="primary" value="Fotovoltaica"></ion-radio>
-              </ion-item>
-              <ion-item class="ion-item" no-lines lines="none">
-                <ion-radio-group value="grape" mode="md">
-                  <ion-item class="ion-item" no-lines lines="none">
-                    <ion-label class="protect-card-text">FV Exclusivo</ion-label>
-                    <ion-radio slot="start" color="primary" value="Exclusivo"></ion-radio>
-                  </ion-item>
-                  <ion-item class="ion-item" no-lines lines="none">
-                    <ion-label class="protect-card-text">FV + Mínima potencia</ion-label>
-                    <ion-radio slot="start" color="primary" value="potencia"></ion-radio>
-                  </ion-item>
-                  <ion-item class="ion-item" no-lines lines="none">
-                    <ion-label class="protect-card-text">Máxima potencia</ion-label>
-                    <ion-radio slot="start" color="primary" value="Máxima"></ion-radio>
-                  </ion-item>
-                </ion-radio-group>
-
+                <ion-label class="protect-card-text">Máxima potencia</ion-label>
+                <ion-radio slot="start" color="primary" value="Máxima"></ion-radio>
               </ion-item>
             </ion-radio-group>
-
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
+          </ion-item>
+        </ion-radio-group>
+      </ion-card-content>
+    </ion-card>
     <ion-row>
       <ion-col>
         <button class="signin-button" routerLink="/option" routerDirection="forward">GUARDAR</button>
