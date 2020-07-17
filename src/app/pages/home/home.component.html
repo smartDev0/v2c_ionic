@@ -2,20 +2,20 @@
   <img src="assets/setting.png" class="setting-img" routerLink="/setting" routerDirection="forward">
   <img src="assets/options.png" class="options-img" routerLink="/statistics" routerDirection="forward">
   <div class="date-time">
-    <ion-datetime value="{{today | date}}" placeholder="Select Date"></ion-datetime>
+    <ion-datetime value="{{today| date}}" displayFormat="MMM, YYYY" placeholder="Select Date"></ion-datetime>
   </div>
   <div class="progress-group">
     <ion-row>
       <ion-col>
         <div class="d-flex">
-          <circle-progress [percent]="85" [radius]="30" [outerStrokeWidth]="2" [innerStrokeWidth]="1"
+          <circle-progress [percent]="percentPower" [showTitle]="false" [showUnits]="false" [showSubtitle]="false" [radius]="30" [outerStrokeWidth]="2" [innerStrokeWidth]="1"
             [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
           </circle-progress>
           <ion-label class="progress-text d-flex-v-center">
             <div>
               Energía total
               <div class="progress-title">
-                280 kWh
+                {{currentPowverVale}} kWh
               </div>
             </div>
           </ion-label>
@@ -23,14 +23,14 @@
       </ion-col>
       <ion-col>
         <div class="d-flex">
-          <circle-progress [percent]="25" [radius]="30" [outerStrokeWidth]="2" [innerStrokeWidth]="1"
-            [outerStrokeColor]="'#712ce2'" [innerStrokeColor]="'#712ce2'" [animation]="true" [animationDuration]="300">
+          <circle-progress [percent]="percentCost" [radius]="30" [outerStrokeWidth]="2" [innerStrokeWidth]="1"
+            [outerStrokeColor]="'#712ce2'" [innerStrokeColor]="'#712ce2'" [animation]="true" [animationDuration]="300" [showTitle]="false" [showUnits]="false" [showSubtitle]="false">
           </circle-progress>
           <ion-label class="progress-text d-flex-v-center">
             <div>
               Coste total
               <div class="progress-title">
-                72,80 €
+                {{currentCostVale}} €
               </div>
             </div>
           </ion-label>
@@ -56,7 +56,7 @@
             Dark Garaje B
          </div>
          <div class="text-center">
-           <ion-toggle name="garaje" color="success" checked></ion-toggle>
+           <ion-toggle name="garaje" color="success" checked mode="md"></ion-toggle>
          </div>
         </ion-card-content>
       </ion-card>
@@ -71,7 +71,7 @@
             Plus Chalet
          </div>
          <div class="text-center">
-           <ion-toggle name="chalet" color="success"></ion-toggle>
+           <ion-toggle name="chalet" color="success" mode="md"></ion-toggle>
          </div>
         </ion-card-content>
       </ion-card>
@@ -88,7 +88,7 @@
             Up Plaza 28
          </div>
          <div class="text-center">
-           <ion-toggle name="plaza" color="success" ></ion-toggle>
+           <ion-toggle name="plaza" color="success" mode="md"></ion-toggle>
          </div>
         </ion-card-content>
       </ion-card>
@@ -103,7 +103,7 @@
             Pole Empresa
          </div>
          <div class="text-center">
-           <ion-toggle name="empresa" color="success" checked></ion-toggle>
+           <ion-toggle name="empresa" color="success" checked  mode="md"></ion-toggle>
          </div>
         </ion-card-content>
       </ion-card>
