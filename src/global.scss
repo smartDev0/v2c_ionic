@@ -500,7 +500,7 @@ ion-row {
   min-height: 100vh;
 }
 .charger-title {
-  padding: 50px 0;
+  padding: 50px 0 5px;
   color: #ed0000;
   font-family: Arial;
   font-size: 18px;
@@ -508,6 +508,11 @@ ion-row {
   line-height: 24px;
   text-align: center;
   letter-spacing: 0.5px;
+}
+.charger-border {
+  width: 60px;
+  border: 1px solid red;
+  margin: auto;
 }
 .charge-input-group {
   margin: 0px 30px;
@@ -766,10 +771,12 @@ ion-card-header {
   color: #ffffff;
   font-family: Arial;
   font-size: 18px;
-  font-weight: 400;
-  // line-height: 40px;
+  font-weight: bold;
   text-align: center;
   padding: 7px 20px;
+}
+.option-sub-title {
+  font-weight: normal !important;
 }
 .information-img {
   height: 50px;

@@ -6,7 +6,9 @@
         <img src="assets/statistics-logo.png" alt="..." class="information-img">
         <div class="option-title">
           ESTADÍSTICAS
-          TOTAL DE CARGADORES
+          <div class="option-sub-title">
+            TOTAL DE CARGADORES
+          </div>
         </div>
         <br>
       </ion-col>
@@ -14,14 +16,14 @@
   </ion-toolbar>
 
   <ion-card style="margin-top: -20px;z-index: 10;" mode="ios">
-    <ion-card-content>
+    <ion-card-content style="padding: 6px;">
       <ion-toolbar mode="md">
         <ion-segment value="1" (ionChange)="segmentChanged($event)">
           <ion-segment-button value="1">
-            <ion-icon name="flash" mode="ios"></ion-icon>
+            <ion-icon name="flash-outline"></ion-icon>
           </ion-segment-button>
           <ion-segment-button value="2">
-            <ion-icon name="time" mode="ios"></ion-icon>
+            <ion-icon name="time-outline" mode="ios"></ion-icon>
           </ion-segment-button>
           <ion-segment-button value="3">
             <ion-icon name="logo-euro" mode="ios"></ion-icon>
