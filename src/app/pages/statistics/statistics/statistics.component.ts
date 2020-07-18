@@ -29,7 +29,7 @@ export class StatisticsComponent implements OnInit {
           datasets: [
             {
               label: "",
-              fill: false,
+              fill: true,
               lineTension: 0.1,
               backgroundColor: "#fffcfc",
               borderColor: "#f1f1f1",
@@ -51,6 +51,42 @@ export class StatisticsComponent implements OnInit {
             },
           ],
         },
+        options: {
+          legend: {
+            position: "bottom",
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  fontColor: "rgba(0,0,0,0.5)",
+                  fontStyle: "bold",
+                  beginAtZero: true,
+                  maxTicksLimit: 5,
+                  padding: 20,
+                },
+                gridLines: {
+                  drawTicks: false,
+                  display: false,
+                },
+              },
+            ],
+            xAxes: [
+              {
+                gridLines: {
+                  zeroLineColor: "transparent",
+                  drawTicks: false,
+                  display: false,
+                },
+                ticks: {
+                  padding: 20,
+                  fontColor: "rgba(0,0,0,0.5)",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+          },
+        },
       });
       new Chart(this.lineCanvasTimer.nativeElement, {
         type: "line",
@@ -59,7 +95,7 @@ export class StatisticsComponent implements OnInit {
           datasets: [
             {
               label: "",
-              fill: false,
+              fill: true,
               lineTension: 0.1,
               backgroundColor: "#fffcfc",
               borderColor: "#f1f1f1",
@@ -81,6 +117,42 @@ export class StatisticsComponent implements OnInit {
             },
           ],
         },
+        options: {
+          legend: {
+            position: "bottom",
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  fontColor: "rgba(0,0,0,0.5)",
+                  fontStyle: "bold",
+                  beginAtZero: true,
+                  maxTicksLimit: 5,
+                  padding: 20,
+                },
+                gridLines: {
+                  drawTicks: false,
+                  display: false,
+                },
+              },
+            ],
+            xAxes: [
+              {
+                gridLines: {
+                  zeroLineColor: "transparent",
+                  drawTicks: false,
+                  display: false,
+                },
+                ticks: {
+                  padding: 20,
+                  fontColor: "rgba(0,0,0,0.5)",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+          },
+        },
       });
       new Chart(this.lineCanvasEuro.nativeElement, {
         type: "line",
@@ -89,7 +161,7 @@ export class StatisticsComponent implements OnInit {
           datasets: [
             {
               label: "",
-              fill: false,
+              fill: true,
               lineTension: 0.1,
               backgroundColor: "#fffcfc",
               borderColor: "#f1f1f1",
@@ -110,6 +182,42 @@ export class StatisticsComponent implements OnInit {
               spanGaps: false,
             },
           ],
+        },
+        options: {
+          legend: {
+            position: "bottom",
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  fontColor: "rgba(0,0,0,0.5)",
+                  fontStyle: "bold",
+                  beginAtZero: true,
+                  maxTicksLimit: 5,
+                  padding: 20,
+                },
+                gridLines: {
+                  drawTicks: false,
+                  display: false,
+                },
+              },
+            ],
+            xAxes: [
+              {
+                gridLines: {
+                  zeroLineColor: "transparent",
+                  drawTicks: false,
+                  display: false,
+                },
+                ticks: {
+                  padding: 20,
+                  fontColor: "rgba(0,0,0,0.5)",
+                  fontStyle: "bold",
+                },
+              },
+            ],
+          },
         },
       });
     }, 300);
