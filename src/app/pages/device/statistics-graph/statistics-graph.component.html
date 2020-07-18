@@ -14,18 +14,18 @@
 
   <ion-card style="margin-top: -20px;z-index: 10;" mode="ios">
     <ion-card-content>
-      <ion-toolbar mode="md">
-        <ion-segment value="1" (ionChange)="segmentChanged($event)">
-          <ion-segment-button value="1">
+      <ion-toolbar mode="ios">
+        <ion-segment value="1" (ionChange)="segmentChanged($event)" style="background-color: red;">
+          <ion-segment-button value="1" class="segment-button">
             <ion-icon name="flash-outline" mode="ios"></ion-icon>
           </ion-segment-button>
-          <ion-segment-button value="2">
+          <ion-segment-button value="2" class="segment-button">
             <ion-icon name="time-outline" mode="ios"></ion-icon>
           </ion-segment-button>
-          <ion-segment-button value="3">
+          <ion-segment-button value="3" class="segment-button">
             <ion-icon name="logo-euro" mode="ios"></ion-icon>
           </ion-segment-button>
-          <ion-segment-button value="4">
+          <ion-segment-button value="4" class="segment-button">
             <ion-icon name="menu-outline" mode="ios"></ion-icon>
           </ion-segment-button>
         </ion-segment>

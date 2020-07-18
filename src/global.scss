@@ -731,6 +731,10 @@ ion-row {
   color: white;
   min-width: 60px;
 }
+.segment-button {
+  color: white;
+}
+
 .segment-button-checked {
   // background: #fff;
   color: var(--ion-color-dark);
@@ -740,6 +744,7 @@ ion-row {
 ion-segment-button {
   font-size: 10px;
 }
+
 .share-card-text {
   color: #474747;
   font-family: Arial;
