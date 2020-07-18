@@ -43,16 +43,16 @@
             </div>
           </ion-col>
         </ion-row>
-        <ion-toolbar>
-          <ion-segment value="1" style="background: red;" (ionChange)="segmentChanged($event.target.value)">
-            <ion-segment-button value="1">
+        <!-- <ion-toolbar> -->
+          <ion-segment value="1" style="background: red; width: 100%;" mode="ios" (ionChange)="segmentChanged($event.target.value)">
+            <ion-segment-button value="1" class="stastics-seg">
               <ion-label>TEMPORIZADOR 1</ion-label>
             </ion-segment-button>
-            <ion-segment-button value="2">
+            <ion-segment-button value="2" class="stastics-seg">
               <ion-label>TEMPORIZADOR 2</ion-label>
             </ion-segment-button>
           </ion-segment>
-        </ion-toolbar>
+        <!-- </ion-toolbar> -->
         <div [ngSwitch]="segment">
           <div *ngSwitchCase="1">
             <ion-row>
@@ -87,11 +87,11 @@
                     INICIO
                   </ion-label>
                   <div class="d-flex-v-center">
-                    <input type="number" class="timper-input">
-                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1"  #num1  (keyup)="moveFocus($event, num2)">
+                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1"  #num2 (keyup)="moveFocus($event, num3)">
                     :
-                    <input type="number" class="timper-input">
-                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1"  #num3 (keyup)="moveFocus($event, num4)">
+                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1" #num4 (keyup)="moveFocus($event, num4)">
                   </div>
                 </div>
               </ion-col>
@@ -103,11 +103,11 @@
                     FIN
                   </ion-label>
                   <div class="d-flex-v-center">
-                    <input type="number" class="timper-input">
-                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input" #num5 (keyup)="moveFocus($event, num6)">
+                    <input type="number" class="timper-input" #num6 (keyup)="moveFocus($event, num7)">
                     :
-                    <input type="number" class="timper-input">
-                    <input type="number" class="timper-input">
+                    <input type="number" class="timper-input" #num7 (keyup)="moveFocus($event, num8)">
+                    <input type="number" class="timper-input" #num8 (keyup)="moveFocus($event, num8)">
                   </div>
                 </div>
               </ion-col>
