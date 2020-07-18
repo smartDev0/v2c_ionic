@@ -6,6 +6,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./protect.component.scss"],
 })
 export class ProtectComponent implements OnInit {
+  ionRadioValue;
+  ionRadioSubValue;
   public isActive = false;
   constructor() {}
 
@@ -15,6 +17,19 @@ export class ProtectComponent implements OnInit {
       this.isActive = true;
     } else {
       this.isActive = false;
+    }
+  }
+  radioOnSubChecked(event) {
+    if (event.target.value != "") {
+      this.ionRadioValue = "Fotovoltaica";
+    }
+  }
+  radioOnChecked(event) {
+    console.log(this.ionRadioValue);
+    if (event.target.value != "Fotovoltaica") {
+      this.ionRadioSubValue = "";
+    } else {
+      this.ionRadioValue = event.target.value;
     }
   }
 }

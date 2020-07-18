@@ -27,7 +27,7 @@
     </ion-card>
     <ion-card mode="ios" class="limit-card" *ngIf="isActive">
       <ion-card-content>
-        <ion-radio-group value="grape" mode="md">
+        <ion-radio-group value="grape" mode="md" [(ngModel)]="ionRadioValue" (ionChange)="radioOnChecked($event)">
           <ion-item class="ion-item" no-lines lines="none">
             <ion-label class="protect-card-text">Monofásica</ion-label>
             <ion-radio slot="start" color="primary" value="Monofásica"></ion-radio>
@@ -40,8 +40,10 @@
             <ion-label class="protect-card-text">Fotovoltaica</ion-label>
             <ion-radio slot="start" color="primary" value="Fotovoltaica"></ion-radio>
           </ion-item>
-          <ion-item class="ion-item" no-lines lines="none">
-            <ion-radio-group value="grape" mode="md">
+          
+        </ion-radio-group>
+        <ion-item class="ion-item" no-lines lines="none">
+            <ion-radio-group value="Exclusivo" mode="md" (ionChange)="radioOnSubChecked($event)" [(ngModel)]="ionRadioSubValue">
               <ion-item class="ion-item" no-lines lines="none">
                 <ion-label class="protect-card-text">FV Exclusivo</ion-label>
                 <ion-radio slot="start" color="primary" value="Exclusivo"></ion-radio>
@@ -56,7 +58,6 @@
               </ion-item>
             </ion-radio-group>
           </ion-item>
-        </ion-radio-group>
       </ion-card-content>
     </ion-card>
     <ion-row>
