@@ -25,7 +25,6 @@ export class ProtectComponent implements OnInit {
     }
   }
   radioOnChecked(event) {
-    console.log(this.ionRadioValue);
     if (event.target.value != "Fotovoltaica") {
       this.ionRadioSubValue = "";
     } else {
