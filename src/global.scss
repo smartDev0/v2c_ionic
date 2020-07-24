@@ -285,13 +285,34 @@
   line-height: 20px;
   text-align: center;
   padding-top: 40px;
+  display: flex;
 }
 .date-time ion-datetime {
-  width: 130px;
+  width: 100px;
   border: 1px solid #ebebeb;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   margin: auto;
-  padding: 8px 10px;
+  padding: 8px 15px;
+  padding-right: 0px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.date-arrow {
+  width: 30px;
+  border: 1px solid #ebebeb;
+  right: 10px;
+  /* position: absolute; */
+  /* margin-left: -21px; */
+  /* margin-right: 228px; */
+  position: absolute;
+  margin-right: 90px;
+  height: 38px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.date-arrow img {
+  width: 10px;
+  padding-top: 16px;
 }
 .progress-group {
   padding: 10px 10px;
@@ -381,11 +402,11 @@ ion-card-header {
 .setting-card-text {
   color: #9b9b9b;
   font-family: Arial;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 400;
   line-height: 30px;
   //   text-align: right;
-  letter-spacing: 0.325px;
+  // letter-spacing: 0.325px;
 }
 .d-flex ion-label {
   color: #595959;
@@ -724,7 +745,7 @@ ion-row {
   // line-height: 44px;
 }
 .segment-ion {
-  // background: #de0404;
+  background: #de0404;
   box-shadow: 0px 20px 75px rgba(221, 221, 221, 0.55);
 }
 .stastics-seg {
@@ -738,9 +759,15 @@ ion-segment-button {
   --background-hover-opacity: 0 !important;
 }
 .segment-button {
-  color: white;
+  // color: white;
 }
-
+.statistics-seg ion-segment-button {
+  min-width: 40px !important;
+  /* margin: auto; */
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
 .segment-button-checked {
   // background: #fff;
   color: var(--ion-color-dark);
