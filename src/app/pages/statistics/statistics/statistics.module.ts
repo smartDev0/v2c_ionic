@@ -18,8 +18,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    // IonicModule,
     RouterModule.forChild(routes),
+    IonicModule.forRoot({ rippleEffect: false }),
   ],
   declarations: [StatisticsComponent],
 })

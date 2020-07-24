@@ -724,12 +724,18 @@ ion-row {
   // line-height: 44px;
 }
 .segment-ion {
-  background: #de0404;
+  // background: #de0404;
   box-shadow: 0px 20px 75px rgba(221, 221, 221, 0.55);
 }
 .stastics-seg {
   color: white;
-  min-width: 60px;
+  min-width: 54px;
+  margin: 8px 0;
+}
+
+ion-segment-button {
+  // --background-focused-opacity: 0 !important;
+  --background-hover-opacity: 0 !important;
 }
 .segment-button {
   color: white;

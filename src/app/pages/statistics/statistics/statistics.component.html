@@ -18,15 +18,15 @@
   <ion-card style="margin-top: -20px;z-index: 10;" mode="ios">
     <ion-card-content style="padding: 6px;">
       <ion-toolbar mode="md">
-        <ion-segment value="1" (ionChange)="segmentChanged($event)">
+        <ion-segment value="1" (ionChange)="segmentChanged($event)" color="primary">
           <ion-segment-button value="1">
             <ion-icon name="flash-outline"></ion-icon>
           </ion-segment-button>
-          <ion-segment-button value="2">
-            <ion-icon name="time-outline" mode="ios"></ion-icon>
+          <ion-segment-button value="2" rippleEffect="false">
+            <ion-icon name="time-outline"></ion-icon>
           </ion-segment-button>
           <ion-segment-button value="3">
-            <ion-icon name="logo-euro" mode="ios"></ion-icon>
+            <ion-icon name="logo-euro" ></ion-icon>
           </ion-segment-button>
         </ion-segment>
       </ion-toolbar>
