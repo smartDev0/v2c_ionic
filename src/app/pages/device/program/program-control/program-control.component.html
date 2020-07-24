@@ -57,25 +57,46 @@
           <div *ngSwitchCase="1">
             <ion-row>
               <ion-col class="d-flex-v-center">
-                <div class="isNonActive-div d-flex-v-center">
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('L')" *ngIf="!this.isLActive">
                   L
                 </div>
-                <div class="isNonActive-div d-flex-v-center">
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('L')" *ngIf="this.isLActive">
+                  L
+                </div>
+                <div class="isNonActive-div d-flex-v-center"  (click)="onChangeSelect('M')" *ngIf="!this.isMActive">
                   M
                 </div>
-                <div class="isActive-div d-flex-v-center">
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('M')" *ngIf="this.isMActive">
+                  M
+                </div>
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('X')" *ngIf="this.isXActive">
                   X
                 </div>
-                <div class="isNonActive-div d-flex-v-center">
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('X')" *ngIf="!this.isXActive">
+                  X
+                </div>
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('J')" *ngIf="!this.isJActive">
                   J
                 </div>
-                <div class="isNonActive-div d-flex-v-center">
+                <div class="isActive-div d-flex-v-center"  (click)="onChangeSelect('J')" *ngIf="this.isJActive">
+                  J
+                </div>
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('V')" *ngIf="!this.isVActive">
                   V
                 </div>
-                <div class="isNonActive-div d-flex-v-center">
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('V')" *ngIf="this.isVActive">
+                  V
+                </div>
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('S')" *ngIf="!this.isSActive">
                   S
                 </div>
-                <div class="isNonActive-div d-flex-v-center">
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('S')" *ngIf="this.isSActive">
+                  S
+                </div>
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('D')" *ngIf="!this.isDActive">
+                  D
+                </div>
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('D')" *ngIf="this.isDActive">
                   D
                 </div>
               </ion-col>
@@ -124,25 +145,46 @@
           <div *ngSwitchCase="2">
             <ion-row>
               <ion-col class="d-flex-v-center">
-                <div class="isActive-div d-flex-v-center">
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('L')" *ngIf="!this.isLActive">
                   L
                 </div>
-                <div class="isNonActive-div d-flex-v-center">
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('L')" *ngIf="this.isLActive">
+                  L
+                </div>
+                <div class="isNonActive-div d-flex-v-center"  (click)="onChangeSelect('M')" *ngIf="!this.isMActive">
                   M
                 </div>
-                <div class="isActive-div d-flex-v-center">
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('M')" *ngIf="this.isMActive">
+                  M
+                </div>
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('X')" *ngIf="this.isXActive">
                   X
                 </div>
-                <div class="isNonActive-div d-flex-v-center">
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('X')" *ngIf="!this.isXActive">
+                  X
+                </div>
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('J')" *ngIf="!this.isJActive">
                   J
                 </div>
-                <div class="isNonActive-div d-flex-v-center">
+                <div class="isActive-div d-flex-v-center"  (click)="onChangeSelect('J')" *ngIf="this.isJActive">
+                  J
+                </div>
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('V')" *ngIf="!this.isVActive">
                   V
                 </div>
-                <div class="isNonActive-div d-flex-v-center">
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('V')" *ngIf="this.isVActive">
+                  V
+                </div>
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('S')" *ngIf="!this.isSActive">
                   S
                 </div>
-                <div class="isNonActive-div d-flex-v-center">
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('S')" *ngIf="this.isSActive">
+                  S
+                </div>
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('D')" *ngIf="!this.isDActive">
+                  D
+                </div>
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('D')" *ngIf="this.isDActive">
                   D
                 </div>
               </ion-col>
