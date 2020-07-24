@@ -1,6 +1,7 @@
 <ion-content fullscreen>
   <ion-toolbar color="primary" class="toolbar-radius">
-    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/option" routerDirection="forward">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/option"
+      routerDirection="forward">
     <ion-row>
       <ion-col class="text-center">
         <img src="assets/statistics-logo.png" alt="..." class="information-img">
@@ -15,9 +16,10 @@
   <ion-card style="margin-top: -20px;z-index: 10;" mode="ios">
     <ion-card-content>
       <ion-toolbar mode="md">
-        <ion-segment value="1" (ionChange)="segmentChanged($event)" color="primary" class="statistics-seg">
+        <ion-segment value="1" (ionChange)="segmentChanged($event)"
+          color="primary" class="statistics-seg">
           <ion-segment-button value="1" class="segment-button">
-            <ion-icon name="flash-outline" mode="ios" ></ion-icon>
+            <ion-icon name="flash-outline" mode="ios"></ion-icon>
           </ion-segment-button>
           <ion-segment-button value="2" class="segment-button">
             <ion-icon name="time-outline" mode="ios"></ion-icon>
@@ -40,7 +42,11 @@
         </ion-label>
         &nbsp;
         &nbsp;
-        <ion-datetime class="datetime-ion" value="{{today | date}}" placeholder="Select Date" mode="ios"></ion-datetime>
+        <ion-datetime class="datetime-ion" value="{{today | date}}"
+          doneText="Ok"
+          monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out,
+          nov, dez'
+          cancelText="Cancelar" placeholder="Select Date" mode="ios"></ion-datetime>
         <img src="assets/calendar.png" alt="" class="calendar-icon">
       </div>
     </ion-col>
@@ -53,7 +59,11 @@
         </ion-label>
         &nbsp;
         &nbsp;
-        <ion-datetime class="datetime-ion" value="{{today | date}}" placeholder="Select Date" mode="ios"></ion-datetime>
+        <ion-datetime class="datetime-ion" value="{{today | date}}"
+          doneText="Ok"
+          monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out,
+          nov, dez'
+          cancelText="Cancelar" placeholder="Select Date" mode="ios"></ion-datetime>
         <img src="assets/calendar.png" alt="" class="calendar-icon">
       </div>
     </ion-col>
@@ -62,7 +72,8 @@
     <div *ngSwitchCase="1">
       <ion-row>
         <ion-col>
-          <canvas #lineCanvas colours="[ { fillColor: '#ffff00' }, { fillColor: '#0066ff' } ]"></canvas>
+          <canvas #lineCanvas colours="[ { fillColor: '#ffff00' }, { fillColor:
+            '#0066ff' } ]"></canvas>
         </ion-col>
       </ion-row>
       <div class="text-center">
@@ -74,7 +85,8 @@
     <div *ngSwitchCase="2">
       <ion-row>
         <ion-col>
-          <canvas #lineCanvasTimer colours="[ { fillColor: '#ffff00' }, { fillColor: '#0066ff' } ]"></canvas>
+          <canvas #lineCanvasTimer colours="[ { fillColor: '#ffff00' }, {
+            fillColor: '#0066ff' } ]"></canvas>
         </ion-col>
       </ion-row>
       <div class="text-center">
@@ -86,7 +98,8 @@
     <div *ngSwitchCase="3">
       <ion-row>
         <ion-col>
-          <canvas #lineCanvasEuro colours="[ { fillColor: '#ffff00' }, { fillColor: '#0066ff' } ]"> </canvas>
+          <canvas #lineCanvasEuro colours="[ { fillColor: '#ffff00' }, {
+            fillColor: '#0066ff' } ]"> </canvas>
         </ion-col>
       </ion-row>
       <div class="text-center">
@@ -113,7 +126,7 @@
                 </div>
                 <div class="vertical-divider"></div>
                 <div class="history-text">
-                 <small>ENERGÍA</small> : <b>10.3kWh</b>
+                  <small>ENERGÍA</small> : <b>10.3kWh</b>
                 </div>
               </div>
               <div class="sum-value">
@@ -140,7 +153,7 @@
                 </div>
                 <div class="vertical-divider"></div>
                 <div class="history-text">
-                 <small>ENERGÍA</small> : <b>10.3kWh</b>
+                  <small>ENERGÍA</small> : <b>10.3kWh</b>
                 </div>
               </div>
               <div class="sum-value">
@@ -167,7 +180,7 @@
                 </div>
                 <div class="vertical-divider"></div>
                 <div class="history-text">
-                 <small>ENERGÍA</small> : <b>10.3kWh</b>
+                  <small>ENERGÍA</small> : <b>10.3kWh</b>
                 </div>
               </div>
               <div class="sum-value">
@@ -182,8 +195,8 @@
         <div class="statisctics-total">TOTAL</div>
         <div class="border-divider"></div>
       </div>
-      <ion-card mode="ios" style="  background: #ed0000;
-  box-shadow: 0px 20px 75px rgba(221,221,221,0.55);">
+      <ion-card mode="ios" style="background: #ed0000;
+        box-shadow: 0px 20px 75px rgba(221,221,221,0.55);">
         <ion-card-content>
           <ion-row>
             <ion-col class="text-center">

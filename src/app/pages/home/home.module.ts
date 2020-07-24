@@ -7,6 +7,7 @@ import { IonicModule } from "@ionic/angular";
 
 import { HomeComponent } from "./home.component";
 import { NgCircleProgressModule } from "ng-circle-progress";
+import { TranslateModule } from "@ngx-translate/core";
 const routes: Routes = [
   {
     path: "",
@@ -20,6 +21,9 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
+    TranslateModule.forRoot({
+      defaultLanguage: "es",
+    }),
     NgCircleProgressModule.forRoot({
       // set defaults here
       radius: 40,

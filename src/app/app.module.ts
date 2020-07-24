@@ -8,7 +8,8 @@ import { StatusBar } from "@ionic-native/status-bar/ngx";
 
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
-
+import localeEs from "@angular/common/locales/es";
+import { registerLocaleData } from "@angular/common";
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -20,4 +21,8 @@ import { AppRoutingModule } from "./app-routing.module";
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {
+    registerLocaleData(localeEs, "es");
+  }
+}

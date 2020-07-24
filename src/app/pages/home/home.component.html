@@ -2,7 +2,13 @@
   <img src="assets/setting.png" class="setting-img" routerLink="/setting" routerDirection="forward">
   <img src="assets/options.png" class="options-img" routerLink="/statistics" routerDirection="forward">
   <div class="date-time">
-    <ion-datetime value="{{today| date}}" displayFormat="MMM, YYYY" placeholder="Select Date"></ion-datetime>
+    <ion-datetime value="{{today| date}}"
+     displayFormat="MMM, YYYY" mode="ios" 
+     placeholder="Select Date"
+     doneText="Ok"
+      monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez'
+       cancelText="Cancelar">
+    </ion-datetime>
     <div class="date-arrow">
       <img src="assets/arrow_down.png">
     </div>
