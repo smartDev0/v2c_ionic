@@ -286,6 +286,7 @@
   text-align: center;
   padding-top: 40px;
   display: flex;
+  justify-content: center;
 }
 .date-time ion-datetime {
   width: 100px;
@@ -296,6 +297,7 @@
   padding-right: 0px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  margin: 0px;
 }
 .date-arrow {
   width: 30px;
@@ -304,8 +306,8 @@
   /* position: absolute; */
   /* margin-left: -21px; */
   /* margin-right: 228px; */
-  position: absolute;
-  margin-right: 90px;
+  // position: absolute;
+  // margin-right: -127px;
   height: 38px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -1114,11 +1116,11 @@ ion-card-header {
   padding: 5px 30px 5px 8px;
 }
 .calendar-icon {
-  position: absolute;
+  // position: absolute;
   width: 20px;
   height: 20px;
   z-index: 11;
-  margin-right: -140px;
+  margin-left: -24px;
 }
 .chart-total {
   background: #ed0000;
