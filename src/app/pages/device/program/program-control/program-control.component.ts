@@ -8,11 +8,6 @@ import { IonInput } from "@ionic/angular";
 })
 export class ProgramControlComponent implements OnInit {
   segment = 1;
-  // @ViewChild("num1", { static: false }) num1Ref: any;
-  // @ViewChild("num2", { static: false }) num2Ref: any;
-  // @ViewChild("num3", { static: false }) num3Ref: any;
-  // @ViewChild("num4", { static: false }) num4Ref: any;
-
   constructor() {}
 
   ngOnInit() {}

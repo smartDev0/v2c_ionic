@@ -38,19 +38,19 @@
             <div class="text-center">
               <img src="assets/program.png" class="program-icon">
               <div class="program-card-title">
-                PROGRAMA LA CARGA
+              CARGAS PROGRAMADAS
               </div>
             </div>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-card mode="ios" class="timer-card">
+            <ion-card mode="ios" class="timer-card" *ngIf="TimerCardOne">
               <ion-card-content>
                 <div class="timer-card-header text-center">
                   TEMPORIZADOR 1
                 </div>
-                <img src="assets/close-icon.png" class="close-img">
+                <img src="assets/close-icon.png" class="close-img" (click)="onClickTimerCardRemove(1)">
                 <ion-row>
                   <ion-col class="text-center">
                     <ion-label>
@@ -98,12 +98,12 @@
                 </ion-row>
               </ion-card-content>
             </ion-card>
-            <ion-card mode="ios" class="timer-card">
+            <ion-card mode="ios" class="timer-card" *ngIf="TimerCardTwo">
               <ion-card-content>
                 <div class="timer-card-header text-center">
                   TEMPORIZADOR 2
                 </div>
-                 <img src="assets/close-icon.png" class="close-img">
+                 <img src="assets/close-icon.png" class="close-img" (click)="onClickTimerCardRemove(2)">
                 <ion-row>
                   <ion-col class="text-center">
                     <ion-label>

@@ -33,7 +33,7 @@
   width: 40vw;
 }
 .form {
-  padding: 0 50px;
+  padding: 0 40px;
 }
 .form-group {
   width: 100%;
@@ -178,7 +178,7 @@
   //   width: 10%;
 }
 .forgot-form {
-  padding: 40px 30px 25px;
+  padding: 40px 24px 25px;
   border: solid 1px #cfd0d1;
   background: #fbfbfb;
   min-height: 350px;
@@ -1018,12 +1018,15 @@ ion-card-header {
 }
 .timer-card {
   background-color: white;
+  margin: 20px;
 }
 .timer-card-header {
   background: #ed0000;
   color: white;
   box-shadow: 0px 20px 75px rgba(221, 221, 221, 0.55);
   border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
 }
 .timer-card-text {
   color: #474747;
@@ -1038,6 +1041,7 @@ ion-card-header {
   width: 26px;
   cursor: pointer;
   outline: none;
+  z-index: 100;
 }
 .white {
   color: white !important;
@@ -1078,7 +1082,7 @@ ion-card-header {
   width: 20px;
   height: 20px;
   z-index: 11;
-  margin-left: 70px;
+  margin-right: -140px;
 }
 .chart-total {
   background: #ed0000;
@@ -1124,8 +1128,13 @@ ion-card-header {
   border-left: 20px solid transparent;
 }
 .border-divider {
-  border: 1px solid grey;
+  border: 1px solid #e8e8e8;
   width: 100%;
+}
+.statisctics-total {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 10px;
 }
 .total-value-text {
   color: #ffffff;
