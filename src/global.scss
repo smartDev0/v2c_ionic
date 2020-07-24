@@ -773,7 +773,9 @@ ion-segment-button {
   color: var(--ion-color-dark);
   // border-bottom: 3px solid var(--ion-color-primary);
 }
-
+.timer-seg {
+  margin: 2px;
+}
 ion-segment-button {
   font-size: 10px;
 }
