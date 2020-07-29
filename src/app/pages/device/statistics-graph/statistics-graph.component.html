@@ -13,7 +13,7 @@
   </ion-toolbar>
 
   <ion-card style="margin-top: -20px;z-index: 10;" mode="ios">
-    <ion-card-content>
+    <ion-card-content style="padding: 6px;">
       <ion-toolbar mode="md">
         <ion-segment value="1" (ionChange)="segmentChanged($event)" color="primary" class="statistics-seg">
           <ion-segment-button value="1" class="segment-button">
@@ -69,8 +69,11 @@
       </div>
     </ion-col>
   </ion-row>
+
   <div [ngSwitch]="segment">
     <div *ngSwitchCase="1">
+      <br>
+      <br>
       <ion-row>
         <ion-col>
           <canvas #lineCanvas colours="[ { fillColor: '#ffff00' }, { fillColor:
@@ -84,6 +87,8 @@
       </div>
     </div>
     <div *ngSwitchCase="2">
+      <br>
+      <br>
       <ion-row>
         <ion-col>
           <canvas #lineCanvasTimer colours="[ { fillColor: '#ffff00' }, {
@@ -97,6 +102,8 @@
       </div>
     </div>
     <div *ngSwitchCase="3">
+      <br>
+      <br>
       <ion-row>
         <ion-col>
           <canvas #lineCanvasEuro colours="[ { fillColor: '#ffff00' }, {
