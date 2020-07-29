@@ -36,12 +36,13 @@ export class StatisticsComponent implements OnInit {
     this.ngAfterViewInit();
   }
   ngOnInit() {}
+
   ngAfterViewInit() {
     setTimeout(() => {
       new Chart(this.lineCanvas.nativeElement, {
         type: "line",
         data: {
-          labels: ["1 Jun", "2 Jun", "3 Jun", "4 Jun", "5 Jun", "6Jun"],
+          labels: ["1 Ener", "2 Ener", "3 Ener", "4 Ener", "5 Ener", "6 Ener"],
           datasets: [
             {
               label: "",
@@ -63,13 +64,14 @@ export class StatisticsComponent implements OnInit {
               pointRadius: 1,
               pointHitRadius: 10,
               data: [53, 40, 52, 60, 50, 20],
-              spanGaps: false,
+              spanGaps: true,
             },
           ],
         },
         options: {
+          responsive: true,
           legend: {
-            position: "bottom",
+            display: false,
           },
           scales: {
             yAxes: [
@@ -80,11 +82,40 @@ export class StatisticsComponent implements OnInit {
                   beginAtZero: true,
                   maxTicksLimit: 5,
                   padding: 20,
+                  // min: 0,
+                  // max: 100,
+                  // stepSize: 1,
+                  callback: function (value) {
+                    if (value === 0) {
+                      return "0 kwh";
+                    } else if (value === 10) {
+                      return "10 kwh";
+                    } else if (value === 20) {
+                      return "20 kwh";
+                    } else if (value === 30) {
+                      return "30 kwh";
+                    } else if (value === 40) {
+                      return "40 kwh";
+                    } else if (value === 50) {
+                      return "50 kwh";
+                    } else if (value === 60) {
+                      return "60 kwh";
+                    } else if (value === 70) {
+                      return "70 kwh";
+                    } else {
+                      return "";
+                    }
+                  },
                 },
+
                 gridLines: {
                   drawTicks: false,
                   display: false,
                 },
+                // scaleLabel: {
+                //   display: true,
+                //   labelString: "Power( kwh )",
+                // },
               },
             ],
             xAxes: [
@@ -104,10 +135,18 @@ export class StatisticsComponent implements OnInit {
           },
         },
       });
+
       new Chart(this.lineCanvasTimer.nativeElement, {
         type: "line",
         data: {
-          labels: ["Jan 20", "FEB 20", "MAR 20", "ABR 20", "MAY 20", "JUN 20"],
+          labels: [
+            "Ener 20",
+            "Febr 20",
+            "Marz 20",
+            "Abri 20",
+            "Mayo 20",
+            "Juni 20",
+          ],
           datasets: [
             {
               label: "",
@@ -135,7 +174,7 @@ export class StatisticsComponent implements OnInit {
         },
         options: {
           legend: {
-            position: "bottom",
+            display: false,
           },
           scales: {
             yAxes: [
@@ -146,6 +185,33 @@ export class StatisticsComponent implements OnInit {
                   beginAtZero: true,
                   maxTicksLimit: 5,
                   padding: 20,
+                  callback: function (value) {
+                    if (value === 0) {
+                      return "0h";
+                    } else if (value === 10) {
+                      return "10h";
+                    } else if (value === 20) {
+                      return "20h";
+                    } else if (value === 30) {
+                      return "30h";
+                    } else if (value === 40) {
+                      return "40h";
+                    } else if (value === 50) {
+                      return "50h";
+                    } else if (value === 60) {
+                      return "60h";
+                    } else if (value === 70) {
+                      return "70h";
+                    } else if (value === 80) {
+                      return "80h";
+                    } else if (value === 90) {
+                      return "90h";
+                    } else if (value === 100) {
+                      return "100h";
+                    } else {
+                      return "";
+                    }
+                  },
                 },
                 gridLines: {
                   drawTicks: false,
@@ -170,10 +236,11 @@ export class StatisticsComponent implements OnInit {
           },
         },
       });
+
       new Chart(this.lineCanvasEuro.nativeElement, {
         type: "line",
         data: {
-          labels: ["FEB 20", "MAR 20", "ABR 20", "MAY 20", "JUN 20"],
+          labels: ["Febr 20", "Marz 20", "Abri 20", "Mayo 20", "Juni 20"],
           datasets: [
             {
               label: "",
@@ -201,7 +268,7 @@ export class StatisticsComponent implements OnInit {
         },
         options: {
           legend: {
-            position: "bottom",
+            display: false,
           },
           scales: {
             yAxes: [
@@ -212,6 +279,33 @@ export class StatisticsComponent implements OnInit {
                   beginAtZero: true,
                   maxTicksLimit: 5,
                   padding: 20,
+                  callback: function (value) {
+                    if (value === 0) {
+                      return "0€";
+                    } else if (value === 10) {
+                      return "10€";
+                    } else if (value === 20) {
+                      return "20€";
+                    } else if (value === 30) {
+                      return "30€";
+                    } else if (value === 40) {
+                      return "40€";
+                    } else if (value === 50) {
+                      return "50€";
+                    } else if (value === 60) {
+                      return "60€";
+                    } else if (value === 70) {
+                      return "70€";
+                    } else if (value === 80) {
+                      return "80€";
+                    } else if (value === 90) {
+                      return "90€";
+                    } else if (value === 100) {
+                      return "100€";
+                    } else {
+                      return "";
+                    }
+                  },
                 },
                 gridLines: {
                   drawTicks: false,

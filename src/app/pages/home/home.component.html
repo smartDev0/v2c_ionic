@@ -2,12 +2,8 @@
   <img src="assets/setting.png" class="setting-img" routerLink="/setting" routerDirection="forward">
   <img src="assets/options.png" class="options-img" routerLink="/statistics" routerDirection="forward">
   <div class="date-time">
-    <ion-datetime value="{{today| date}}"
-     displayFormat="MMM, YYYY" mode="ios" 
-     placeholder="Select Date"
-     doneText="Ok"
-      monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out, nov, dez'
-       cancelText="Cancelar">
+    <ion-datetime value="{{today| date}}" displayFormat="MMM, YYYY" mode="ios" placeholder="Select Date" doneText="Ok"
+      monthShortNames='Ener, Febr, Marz, Abri, Mayo, Juni, Juli, Agos, Sept, Octu, Novi, Dici' cancelText="Cancelar">
     </ion-datetime>
     <div class="date-arrow">
       <img src="assets/arrow_down.png">
@@ -17,8 +13,9 @@
     <ion-row>
       <ion-col>
         <div class="d-flex">
-          <circle-progress [percent]="percentPower" [showTitle]="false" [showUnits]="false" [showSubtitle]="false" [radius]="30" [outerStrokeWidth]="2" [innerStrokeWidth]="1"
-            [outerStrokeColor]="'#78C000'" [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
+          <circle-progress [percent]="percentPower" [showTitle]="false" [showUnits]="false" [showSubtitle]="false"
+            [radius]="30" [outerStrokeWidth]="2" [innerStrokeWidth]="1" [outerStrokeColor]="'#78C000'"
+            [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="300">
           </circle-progress>
           <ion-label class="progress-text d-flex-v-center">
             <div>
@@ -33,7 +30,8 @@
       <ion-col>
         <div class="d-flex">
           <circle-progress [percent]="percentCost" [radius]="30" [outerStrokeWidth]="2" [innerStrokeWidth]="1"
-            [outerStrokeColor]="'#712ce2'" [innerStrokeColor]="'#712ce2'" [animation]="true" [animationDuration]="300" [showTitle]="false" [showUnits]="false" [showSubtitle]="false">
+            [outerStrokeColor]="'#712ce2'" [innerStrokeColor]="'#712ce2'" [animation]="true" [animationDuration]="300"
+            [showTitle]="false" [showUnits]="false" [showSubtitle]="false">
           </circle-progress>
           <ion-label class="progress-text d-flex-v-center">
             <div>
@@ -47,78 +45,78 @@
       </ion-col>
     </ion-row>
     <ion-row>
-    <ion-col style="text-align: center;">
-      <ion-label class="home-title">
-        Puntos de recarga
-      </ion-label>
-    </ion-col>
-     <img src="assets/plus.png" class="plus-img" routerLink="/charger" routerDirection="forward">
-  </ion-row>
- 
-  <ion-row>
-    <ion-col>
-      <ion-card style="margin: 0px;"  mode="ios" >
-        <ion-card-header routerLink="/non-connection" routerDirection="forward">
-          <img src="assets/garaje.png" class="device-img">
-        </ion-card-header>
-        <ion-card-content>
-         <div class="device-card-text">
-            Dark Garaje B
-         </div>
-         <div class="text-center">
-           <ion-toggle name="garaje" color="success" checked mode="md"></ion-toggle>
-         </div>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col >
-      <ion-card style="margin: 0px;"  mode="ios">
-        <ion-card-header routerLink="/non-connection" routerDirection="forward">
-          <img src="assets/chalet.png" class="device-img">
-        </ion-card-header>
-        <ion-card-content>
-         <div class="device-card-text">
-            Plus Chalet
-         </div>
-         <div class="text-center">
-           <ion-toggle name="chalet" color="success" mode="md"></ion-toggle>
-         </div>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-card style="margin: 0px;"  mode="ios">
-        <ion-card-header class="text-center" routerLink="/non-connection" routerDirection="forward">
-          <img src="assets/plaza.png" class="device-img">
-        </ion-card-header>
-        <ion-card-content>
-         <div class="device-card-text">
-            Up Plaza 28
-         </div>
-         <div class="text-center">
-           <ion-toggle name="plaza" color="success" mode="md"></ion-toggle>
-         </div>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-    <ion-col>
-      <ion-card style="margin: 0px;"  mode="ios">
-        <ion-card-header routerLink="/non-connection" routerDirection="forward">
-          <img src="assets/empresa.png" class="device-img">
-        </ion-card-header>
-        <ion-card-content>
-         <div class="device-card-text">
-            Pole Empresa
-         </div>
-         <div class="text-center">
-           <ion-toggle name="empresa" color="success" checked  mode="md"></ion-toggle>
-         </div>
-        </ion-card-content>
-      </ion-card>
-    </ion-col>
-  </ion-row>
+      <ion-col style="text-align: center;">
+        <ion-label class="home-title">
+          Puntos de recarga
+        </ion-label>
+      </ion-col>
+      <img src="assets/plus.png" class="plus-img" routerLink="/charger" routerDirection="forward">
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-card style="margin: 0px;" mode="ios">
+          <ion-card-header routerLink="/non-connection" routerDirection="forward">
+            <img src="assets/garaje.png" class="device-img">
+          </ion-card-header>
+          <ion-card-content>
+            <div class="device-card-text">
+              Dark Garaje B
+            </div>
+            <div class="text-center">
+              <ion-toggle name="garaje" color="success" checked mode="md"></ion-toggle>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card style="margin: 0px;" mode="ios">
+          <ion-card-header routerLink="/non-connection" routerDirection="forward">
+            <img src="assets/chalet.png" class="device-img">
+          </ion-card-header>
+          <ion-card-content>
+            <div class="device-card-text">
+              Plus Chalet
+            </div>
+            <div class="text-center">
+              <ion-toggle name="chalet" color="success" mode="md"></ion-toggle>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card style="margin: 0px;" mode="ios">
+          <ion-card-header class="text-center" routerLink="/non-connection" routerDirection="forward">
+            <img src="assets/plaza.png" class="device-img">
+          </ion-card-header>
+          <ion-card-content>
+            <div class="device-card-text">
+              Up Plaza 28
+            </div>
+            <div class="text-center">
+              <ion-toggle name="plaza" color="success" mode="md"></ion-toggle>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card style="margin: 0px;" mode="ios">
+          <ion-card-header routerLink="/non-connection" routerDirection="forward">
+            <img src="assets/empresa.png" class="device-img">
+          </ion-card-header>
+          <ion-card-content>
+            <div class="device-card-text">
+              Pole Empresa
+            </div>
+            <div class="text-center">
+              <ion-toggle name="empresa" color="success" checked mode="md"></ion-toggle>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
   </div>
-  
+
 </ion-content>
