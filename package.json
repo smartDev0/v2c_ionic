@@ -27,6 +27,8 @@
     "@ngx-translate/core": "^13.0.0",
     "chart.js": "^2.9.3",
     "cordova-android": "8.1.0",
+    "ion-rangeslider": "^2.3.1",
+    "jquery": "^3.5.1",
     "ng-circle-progress": "^1.5.1",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",

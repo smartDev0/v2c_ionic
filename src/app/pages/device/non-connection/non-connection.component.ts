@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-
+import * as $ from "jquery";
 @Component({
   selector: "app-non-connection",
   templateUrl: "./non-connection.component.html",
@@ -23,4 +23,5 @@ export class NonConnectionComponent implements OnInit {
     //   this.color = "danger";
     // }
   }
+  ngAfterViewInit() {}
 }
