@@ -8,6 +8,9 @@ import { Chart } from "chart.js";
 export class StatisticsComponent implements OnInit {
   today;
   segment = 1;
+  public euroActive: boolean = false;
+  public electricActive: boolean = true;
+  public timeActive: boolean = false;
   @ViewChild("lineCanvas") lineCanvas: ElementRef;
   @ViewChild("lineCanvasTimer") lineCanvasTimer: ElementRef;
   @ViewChild("lineCanvasEuro") lineCanvasEuro: ElementRef;
@@ -17,6 +20,19 @@ export class StatisticsComponent implements OnInit {
   }
   segmentChanged(event) {
     this.segment = Number(event.detail.value);
+    if (this.segment == 1) {
+      this.electricActive = true;
+      this.euroActive = false;
+      this.timeActive = false;
+    } else if (this.segment == 2) {
+      this.timeActive = true;
+      this.euroActive = false;
+      this.electricActive = false;
+    } else {
+      this.euroActive = true;
+      this.electricActive = false;
+      this.timeActive = false;
+    }
     this.ngAfterViewInit();
   }
   ngOnInit() {}

@@ -22,13 +22,18 @@
         <ion-segment value="1" (ionChange)="segmentChanged($event)"
           color="primary">
           <ion-segment-button value="1">
-            <ion-icon name="flash-outline"></ion-icon>
+            <!-- <ion-icon name="flash-outline"></ion-icon> -->
+             <img src="assets/electric.png" class="euro-img" *ngIf="!electricActive">
+            <img src="assets/electric-active.png" class="euro-img" *ngIf="electricActive">
           </ion-segment-button>
           <ion-segment-button value="2" rippleEffect="false">
-            <ion-icon name="time-outline"></ion-icon>
+            <!-- <ion-icon name="time-outline"></ion-icon> -->
+            <img src="assets/timer.png" class="euro-img" *ngIf="!timeActive">
+            <img src="assets/timer-active.png" class="euro-img" *ngIf="timeActive">
           </ion-segment-button>
           <ion-segment-button value="3">
-            <ion-icon name="logo-euro"></ion-icon>
+            <img src="assets/euro.png" class="euro-img" *ngIf="!euroActive">
+            <img src="assets/euro-active.png" class="euro-img" *ngIf="euroActive">
           </ion-segment-button>
         </ion-segment>
       </ion-toolbar>

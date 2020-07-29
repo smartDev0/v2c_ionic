@@ -1,7 +1,6 @@
 <ion-content fullscreen>
   <ion-toolbar color="primary" class="toolbar-radius">
-    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/option"
-      routerDirection="forward">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/option" routerDirection="forward">
     <ion-row>
       <ion-col class="text-center">
         <img src="assets/statistics-logo.png" alt="..." class="information-img">
@@ -16,19 +15,27 @@
   <ion-card style="margin-top: -20px;z-index: 10;" mode="ios">
     <ion-card-content>
       <ion-toolbar mode="md">
-        <ion-segment value="1" (ionChange)="segmentChanged($event)"
-          color="primary" class="statistics-seg">
+        <ion-segment value="1" (ionChange)="segmentChanged($event)" color="primary" class="statistics-seg">
           <ion-segment-button value="1" class="segment-button">
-            <ion-icon name="flash-outline" mode="ios"></ion-icon>
+            <!-- <ion-icon name="flash-outline" mode="ios"></ion-icon> -->
+            <img src="assets/electric.png" class="euro-img" *ngIf="!electricActive">
+            <img src="assets/electric-active.png" class="euro-img" *ngIf="electricActive">
           </ion-segment-button>
           <ion-segment-button value="2" class="segment-button">
-            <ion-icon name="time-outline" mode="ios"></ion-icon>
+            <!-- <ion-icon name="time-outline" mode="ios"></ion-icon> -->
+            <img src="assets/timer.png" class="euro-img" *ngIf="!timeActive">
+            <img src="assets/timer-active.png" class="euro-img" *ngIf="timeActive">
           </ion-segment-button>
           <ion-segment-button value="3" class="segment-button">
-            <ion-icon name="logo-euro" mode="ios"></ion-icon>
+            <!-- <ion-icon name="logo-euro" mode="ios"></ion-icon>
+             -->
+            <img src="assets/euro.png" class="euro-img" *ngIf="!euroActive">
+            <img src="assets/euro-active.png" class="euro-img" *ngIf="euroActive">
           </ion-segment-button>
           <ion-segment-button value="4" class="segment-button">
-            <ion-icon name="menu-outline" mode="ios"></ion-icon>
+            <!-- <ion-icon name="menu-outline" mode="ios"></ion-icon> -->
+            <img src="assets/humburger.png" class="euro-img" *ngIf="!humburgerActive">
+            <img src="assets/humburger-active.png" class="euro-img" *ngIf="humburgerActive">
           </ion-segment-button>
         </ion-segment>
       </ion-toolbar>
@@ -42,11 +49,8 @@
         </ion-label>
         &nbsp;
         &nbsp;
-        <ion-datetime class="datetime-ion" value="{{today | date}}"
-          doneText="Ok"
-          monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out,
-          nov, dez'
-          cancelText="Cancelar" placeholder="Select Date" mode="ios"></ion-datetime>
+        <ion-datetime class="datetime-ion" value="{{today | date}}" doneText="Ok" monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out,
+          nov, dez' cancelText="Cancelar" placeholder="Select Date" mode="ios"></ion-datetime>
         <img src="assets/calendar.png" alt="" class="calendar-icon">
       </div>
     </ion-col>
@@ -59,11 +63,8 @@
         </ion-label>
         &nbsp;
         &nbsp;
-        <ion-datetime class="datetime-ion" value="{{today | date}}"
-          doneText="Ok"
-          monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out,
-          nov, dez'
-          cancelText="Cancelar" placeholder="Select Date" mode="ios"></ion-datetime>
+        <ion-datetime class="datetime-ion" value="{{today | date}}" doneText="Ok" monthShortNames='jan, fev, mar, abr, mai, jun, jul, ago, set, out,
+          nov, dez' cancelText="Cancelar" placeholder="Select Date" mode="ios"></ion-datetime>
         <img src="assets/calendar.png" alt="" class="calendar-icon">
       </div>
     </ion-col>

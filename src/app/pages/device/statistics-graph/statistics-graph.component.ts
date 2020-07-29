@@ -9,6 +9,10 @@ import { Chart } from "chart.js";
 export class StatisticsGraphComponent implements OnInit {
   today;
   segment = 1;
+  public euroActive: boolean = false;
+  public electricActive: boolean = true;
+  public timeActive: boolean = false;
+  public humburgerActive: boolean = false;
   @ViewChild("lineCanvas") lineCanvas: ElementRef;
   @ViewChild("lineCanvasTimer") lineCanvasTimer: ElementRef;
   @ViewChild("lineCanvasEuro") lineCanvasEuro: ElementRef;
@@ -18,6 +22,27 @@ export class StatisticsGraphComponent implements OnInit {
   }
   segmentChanged(event) {
     this.segment = Number(event.detail.value);
+    if (this.segment == 1) {
+      this.electricActive = true;
+      this.euroActive = false;
+      this.timeActive = false;
+      this.humburgerActive = false;
+    } else if (this.segment == 2) {
+      this.timeActive = true;
+      this.euroActive = false;
+      this.electricActive = false;
+      this.humburgerActive = false;
+    } else if (this.segment == 3) {
+      this.euroActive = true;
+      this.electricActive = false;
+      this.timeActive = false;
+      this.humburgerActive = false;
+    } else {
+      this.humburgerActive = true;
+      this.electricActive = false;
+      this.timeActive = false;
+      this.euroActive = false;
+    }
     this.ngAfterViewInit();
   }
   ngOnInit() {}
