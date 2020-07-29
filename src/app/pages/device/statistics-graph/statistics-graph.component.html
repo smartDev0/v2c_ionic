@@ -11,7 +11,6 @@
       </ion-col>
     </ion-row>
   </ion-toolbar>
-
   <ion-card style="margin-top: -20px;z-index: 10;" mode="ios">
     <ion-card-content style="padding: 6px;">
       <ion-toolbar mode="md">
@@ -67,7 +66,6 @@
       </div>
     </ion-col>
   </ion-row>
-
   <div [ngSwitch]="segment">
     <div *ngSwitchCase="1">
       <br>
@@ -202,7 +200,7 @@
         <div class="border-divider"></div>
       </div>
       <ion-card mode="ios" style="background: #ed0000;
-        box-shadow: 0px 20px 75px rgba(221,221,221,0.55);">
+        box-shadow: 0px 20px 75px rgba(221,221,221,0.55); margin: 5px 15px ">
         <ion-card-content>
           <ion-row>
             <ion-col class="text-center">
@@ -225,6 +223,7 @@
         </ion-card-content>
       </ion-card>
     </div>
+    <br>
   </div>
   <canvas #lineCanvas style="display: none;"></canvas>
   <canvas #lineCanvasTimer style="display: none;"></canvas>
