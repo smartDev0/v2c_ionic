@@ -44,14 +44,15 @@
           </ion-col>
         </ion-row>
         <!-- <ion-toolbar> -->
-          <ion-segment value="1" style="background: red; width: 100%;" mode="ios" (ionChange)="segmentChanged($event.target.value)">
-            <ion-segment-button value="1" class="stastics-seg timer-seg">
-              <ion-label>TEMPORIZADOR 1</ion-label>
-            </ion-segment-button>
-            <ion-segment-button value="2" class="stastics-seg timer-seg">
-              <ion-label>TEMPORIZADOR 2</ion-label>
-            </ion-segment-button>
-          </ion-segment>
+        <ion-segment value="1" style="background: red; width: 100%;" mode="ios"
+          (ionChange)="segmentChanged($event.target.value)">
+          <ion-segment-button value="1" class="stastics-seg timer-seg">
+            <ion-label>TEMPORIZADOR 1</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="2" class="stastics-seg timer-seg">
+            <ion-label>TEMPORIZADOR 2</ion-label>
+          </ion-segment-button>
+        </ion-segment>
         <!-- </ion-toolbar> -->
         <div [ngSwitch]="segment">
           <div *ngSwitchCase="1">
@@ -63,7 +64,7 @@
                 <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('L')" *ngIf="this.isLActive">
                   L
                 </div>
-                <div class="isNonActive-div d-flex-v-center"  (click)="onChangeSelect('M')" *ngIf="!this.isMActive">
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('M')" *ngIf="!this.isMActive">
                   M
                 </div>
                 <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('M')" *ngIf="this.isMActive">
@@ -78,7 +79,7 @@
                 <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('J')" *ngIf="!this.isJActive">
                   J
                 </div>
-                <div class="isActive-div d-flex-v-center"  (click)="onChangeSelect('J')" *ngIf="this.isJActive">
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('J')" *ngIf="this.isJActive">
                   J
                 </div>
                 <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('V')" *ngIf="!this.isVActive">
@@ -108,11 +109,24 @@
                     INICIO
                   </ion-label>
                   <div class="d-flex-v-center">
-                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1"  #num1  (keyup)="moveFocus($event, num2)">
-                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1"  #num2 (keyup)="moveFocus($event, num3)">
+                    <!-- <ion-input #otp1 required maxLength="1"  class="timper-input" min="0" max="9" (keyup)="otpController($event,otp2,'')" type="number">
+                    </ion-input>
+                    <ion-input #otp2 required maxLength="1"  class="timper-input" min="0" max="9" (keyup)="otpController($event,otp3,otp1)" type="number">
+                    </ion-input>
                     :
-                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1"  #num3 (keyup)="moveFocus($event, num4)">
-                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1" #num4 (keyup)="moveFocus($event, num4)">
+                    <ion-input #otp3 required maxLength="1" class="timper-input" min="0" max="9" (keyup)="otpController($event,otp4,otp2)" type="number">
+                    </ion-input>
+                    <ion-input #otp4 required maxLength="1" class="timper-input" min="0" max="9" (keyup)="otpController($event,'',otp3)"   (ionInput)="onInputLast($event)" type="number">
+                    </ion-input> -->
+                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num1
+                      (keyup)="moveFocus($event, num2)">
+                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num2
+                      (keyup)="moveFocus($event, num3)">
+                   
+                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num3
+                      (keyup)="moveFocus($event, num4)">
+                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num4
+                      (keyup)="moveFocus($event, num4)">
                   </div>
                 </div>
               </ion-col>
@@ -135,7 +149,7 @@
             </ion-row>
             <br>
             <div class="text-center">
-            <button class="add-button" routerLink="/program-report" routerDirection="forward">AÑADIR</button>
+              <button class="add-button" routerLink="/program-report" routerDirection="forward">AÑADIR</button>
             </div>
             <br>
             <button class="card-button" routerLink="/program-report" routerDirection="forward">
@@ -151,7 +165,7 @@
                 <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('L')" *ngIf="this.isLActive">
                   L
                 </div>
-                <div class="isNonActive-div d-flex-v-center"  (click)="onChangeSelect('M')" *ngIf="!this.isMActive">
+                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('M')" *ngIf="!this.isMActive">
                   M
                 </div>
                 <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('M')" *ngIf="this.isMActive">
@@ -166,7 +180,7 @@
                 <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('J')" *ngIf="!this.isJActive">
                   J
                 </div>
-                <div class="isActive-div d-flex-v-center"  (click)="onChangeSelect('J')" *ngIf="this.isJActive">
+                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('J')" *ngIf="this.isJActive">
                   J
                 </div>
                 <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('V')" *ngIf="!this.isVActive">
@@ -196,11 +210,14 @@
                     INICIO
                   </ion-label>
                   <div class="d-flex-v-center">
-                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1"  #num1  (keyup)="moveFocus($event, num2)">
-                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1"  #num2 (keyup)="moveFocus($event, num3)">
+                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num1
+                      (keydown)="moveFocus($event, num2)">
+                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num2
+                      (keydown)="moveFocus($event, num3)">
                     :
-                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1"  #num3 (keyup)="moveFocus($event, num4)">
-                    <input type="number" class="timper-input"  min="0" max="9" maxlength="1" #num4 (keyup)="moveFocus($event, num4)">
+                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num3
+                      (keydown)="moveFocus($event, num4)">
+                    <input type="number" class="timper-input" maxlength="1" #num4 (keydown)="moveFocus($event, num4)">
                   </div>
                 </div>
               </ion-col>
@@ -212,18 +229,22 @@
                     FIN
                   </ion-label>
                   <div class="d-flex-v-center">
-                    <input type="number" class="timper-input" #num5 (keyup)="moveFocus($event, num6)">
-                    <input type="number" class="timper-input" #num6 (keyup)="moveFocus($event, num7)">
+                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num5
+                      (keydown)="moveFocus($event, num6)">
+                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num6
+                      (keydown)="moveFocus($event, num7)">
                     :
-                    <input type="number" class="timper-input" #num7 (keyup)="moveFocus($event, num8)">
-                    <input type="number" class="timper-input" #num8 (keyup)="moveFocus($event, num8)">
+                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num7
+                      (keydown)="moveFocus($event, num8)">
+                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num8
+                      (keydown)="moveFocus($event, num8)">
                   </div>
                 </div>
               </ion-col>
             </ion-row>
             <br>
             <div class="text-center">
-            <button class="add-button" routerLink="/program-report" routerDirection="forward">AÑADIR</button>
+              <button class="add-button" routerLink="/program-report" routerDirection="forward">AÑADIR</button>
             </div>
             <br>
             <button class="card-button" routerLink="/program-report" routerDirection="forward">

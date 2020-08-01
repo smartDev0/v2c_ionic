@@ -30,7 +30,30 @@ export class ProgramControlComponent implements OnInit {
   }
 
   moveFocus(event, nextElement) {
+    if (event.target.value < 10) {
+    } else {
+      return 0;
+    }
     if (event.target.value != "") nextElement.focus();
+  }
+  otpController(event, next, prev) {
+    if (event.target.value.length < 1 && prev) {
+      prev.setFocus();
+    } else if (next && event.target.value.length > 0) {
+      next.setFocus();
+    } else {
+      return 0;
+    }
+  }
+  onInputLast(event) {
+    let newValue = event.target.value;
+
+    let regExp = new RegExp("^[A-Za-z0-9? ]+$");
+
+    if (!regExp.test(newValue)) {
+      event.target.value = newValue.slice(0, -1);
+      console.log(event.target.value);
+    }
   }
   onChangeSelect(event) {
     switch (event) {

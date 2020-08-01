@@ -46,12 +46,13 @@ export class StatisticsGraphComponent implements OnInit {
     this.ngAfterViewInit();
   }
   ngOnInit() {}
+
   ngAfterViewInit() {
     setTimeout(() => {
       new Chart(this.lineCanvas.nativeElement, {
         type: "line",
         data: {
-          labels: ["1 Ener", "2 Ener", "3 Ener", "4 Ener", "5 Ener", "6 Ener"],
+          labels: ["1 Ene", "2 Ene", "3 Ene", "4 Ene", "5 Ene", "6 Ene"],
           datasets: [
             {
               label: "",
@@ -148,14 +149,7 @@ export class StatisticsGraphComponent implements OnInit {
       new Chart(this.lineCanvasTimer.nativeElement, {
         type: "line",
         data: {
-          labels: [
-            "Ener 20",
-            "Febr 20",
-            "Marz 20",
-            "Abri 20",
-            "Mayo 20",
-            "Juni 20",
-          ],
+          labels: ["Ene 20", "Feb 20", "Mar 20", "Abr 20", "May 20", "Jun 20"],
           datasets: [
             {
               label: "",
@@ -196,27 +190,27 @@ export class StatisticsGraphComponent implements OnInit {
                   padding: 20,
                   callback: function (value) {
                     if (value === 0) {
-                      return "0h";
+                      return "0 h";
                     } else if (value === 10) {
-                      return "10h";
+                      return "10 h";
                     } else if (value === 20) {
-                      return "20h";
+                      return "20 h";
                     } else if (value === 30) {
-                      return "30h";
+                      return "30 h";
                     } else if (value === 40) {
-                      return "40h";
+                      return "40 h";
                     } else if (value === 50) {
-                      return "50h";
+                      return "50 h";
                     } else if (value === 60) {
-                      return "60h";
+                      return "60 h";
                     } else if (value === 70) {
-                      return "70h";
+                      return "70 h";
                     } else if (value === 80) {
-                      return "80h";
+                      return "80 h";
                     } else if (value === 90) {
-                      return "90h";
+                      return "90 h";
                     } else if (value === 100) {
-                      return "100h";
+                      return "100 h";
                     } else {
                       return "";
                     }
@@ -249,7 +243,7 @@ export class StatisticsGraphComponent implements OnInit {
       new Chart(this.lineCanvasEuro.nativeElement, {
         type: "line",
         data: {
-          labels: ["Febr 20", "Marz 20", "Abri 20", "Mayo 20", "Juni 20"],
+          labels: ["Feb 20", "Mar 20", "Abr 20", "May 20", "Jun 20"],
           datasets: [
             {
               label: "",
@@ -290,27 +284,27 @@ export class StatisticsGraphComponent implements OnInit {
                   padding: 20,
                   callback: function (value) {
                     if (value === 0) {
-                      return "0€";
+                      return "0 €";
                     } else if (value === 10) {
-                      return "10€";
+                      return "10 €";
                     } else if (value === 20) {
-                      return "20€";
+                      return "20 €";
                     } else if (value === 30) {
-                      return "30€";
+                      return "30 €";
                     } else if (value === 40) {
-                      return "40€";
+                      return "40 €";
                     } else if (value === 50) {
-                      return "50€";
+                      return "50 €";
                     } else if (value === 60) {
-                      return "60€";
+                      return "60 €";
                     } else if (value === 70) {
-                      return "70€";
+                      return "70 €";
                     } else if (value === 80) {
-                      return "80€";
+                      return "80 €";
                     } else if (value === 90) {
-                      return "90€";
+                      return "90 €";
                     } else if (value === 100) {
-                      return "100€";
+                      return "100 €";
                     } else {
                       return "";
                     }
