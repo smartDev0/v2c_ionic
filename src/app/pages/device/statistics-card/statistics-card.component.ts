@@ -7,10 +7,14 @@ import { Component, OnInit } from "@angular/core";
 })
 export class StatisticsCardComponent implements OnInit {
   segment = 3;
+  public ampeaValue = 20;
   constructor() {}
 
   ngOnInit() {}
   segmentChanged(event) {
     this.segment = Number(event.detail.value);
+  }
+  onChangeAmpea(event) {
+    this.ampeaValue = event.target.value;
   }
 }
