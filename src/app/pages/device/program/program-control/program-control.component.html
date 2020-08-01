@@ -56,105 +56,111 @@
         <!-- </ion-toolbar> -->
         <div [ngSwitch]="segment">
           <div *ngSwitchCase="1">
-            <ion-row>
-              <ion-col class="d-flex-v-center">
-                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('L')" *ngIf="!this.isLActive">
-                  L
-                </div>
-                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('L')" *ngIf="this.isLActive">
-                  L
-                </div>
-                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('M')" *ngIf="!this.isMActive">
-                  M
-                </div>
-                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('M')" *ngIf="this.isMActive">
-                  M
-                </div>
-                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('X')" *ngIf="this.isXActive">
-                  X
-                </div>
-                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('X')" *ngIf="!this.isXActive">
-                  X
-                </div>
-                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('J')" *ngIf="!this.isJActive">
-                  J
-                </div>
-                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('J')" *ngIf="this.isJActive">
-                  J
-                </div>
-                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('V')" *ngIf="!this.isVActive">
-                  V
-                </div>
-                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('V')" *ngIf="this.isVActive">
-                  V
-                </div>
-                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('S')" *ngIf="!this.isSActive">
-                  S
-                </div>
-                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('S')" *ngIf="this.isSActive">
-                  S
-                </div>
-                <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('D')" *ngIf="!this.isDActive">
-                  D
-                </div>
-                <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('D')" *ngIf="this.isDActive">
-                  D
-                </div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div class="timer-group text-center">
-                  <ion-label>
-                    INICIO
-                  </ion-label>
-                  <div class="d-flex-v-center">
-                    <!-- <ion-input #otp1 required maxLength="1"  class="timper-input" min="0" max="9" (keyup)="otpController($event,otp2,'')" type="number">
-                    </ion-input>
-                    <ion-input #otp2 required maxLength="1"  class="timper-input" min="0" max="9" (keyup)="otpController($event,otp3,otp1)" type="number">
-                    </ion-input>
-                    :
-                    <ion-input #otp3 required maxLength="1" class="timper-input" min="0" max="9" (keyup)="otpController($event,otp4,otp2)" type="number">
-                    </ion-input>
-                    <ion-input #otp4 required maxLength="1" class="timper-input" min="0" max="9" (keyup)="otpController($event,'',otp3)"   (ionInput)="onInputLast($event)" type="number">
-                    </ion-input> -->
-                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num1
-                      (keyup)="moveFocus($event, num2)">
-                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num2
-                      (keyup)="moveFocus($event, num3)">
-                   
-                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num3
-                      (keyup)="moveFocus($event, num4)">
-                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num4
-                      (keyup)="moveFocus($event, num4)">
+            <form [formGroup]="timerForm">
+              <ion-row>
+                <ion-col class="d-flex-v-center">
+                  <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('L')" *ngIf="!this.isLActive">
+                    L
                   </div>
-                </div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div class="timer-group text-center">
-                  <ion-label>
-                    FIN
-                  </ion-label>
-                  <div class="d-flex-v-center">
-                    <input type="number" class="timper-input" #num5 (keyup)="moveFocus($event, num6)">
-                    <input type="number" class="timper-input" #num6 (keyup)="moveFocus($event, num7)">
-                    :
-                    <input type="number" class="timper-input" #num7 (keyup)="moveFocus($event, num8)">
-                    <input type="number" class="timper-input" #num8 (keyup)="moveFocus($event, num8)">
+                  <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('L')" *ngIf="this.isLActive">
+                    L
                   </div>
-                </div>
-              </ion-col>
-            </ion-row>
-            <br>
-            <div class="text-center">
-              <button class="add-button" routerLink="/program-report" routerDirection="forward">AÑADIR</button>
-            </div>
-            <br>
-            <button class="card-button" routerLink="/program-report" routerDirection="forward">
-              VER CARGAS PROGRAMADAS
-            </button>
+                  <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('M')" *ngIf="!this.isMActive">
+                    M
+                  </div>
+                  <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('M')" *ngIf="this.isMActive">
+                    M
+                  </div>
+                  <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('X')" *ngIf="this.isXActive">
+                    X
+                  </div>
+                  <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('X')" *ngIf="!this.isXActive">
+                    X
+                  </div>
+                  <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('J')" *ngIf="!this.isJActive">
+                    J
+                  </div>
+                  <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('J')" *ngIf="this.isJActive">
+                    J
+                  </div>
+                  <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('V')" *ngIf="!this.isVActive">
+                    V
+                  </div>
+                  <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('V')" *ngIf="this.isVActive">
+                    V
+                  </div>
+                  <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('S')" *ngIf="!this.isSActive">
+                    S
+                  </div>
+                  <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('S')" *ngIf="this.isSActive">
+                    S
+                  </div>
+                  <div class="isNonActive-div d-flex-v-center" (click)="onChangeSelect('D')" *ngIf="!this.isDActive">
+                    D
+                  </div>
+                  <div class="isActive-div d-flex-v-center" (click)="onChangeSelect('D')" *ngIf="this.isDActive">
+                    D
+                  </div>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <div class="timer-group text-center">
+                    <ion-label>
+                      INICIO
+                    </ion-label>
+                    <div class="d-flex-v-center" style="margin: 0 48px;">
+                      <ion-input #otp1 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp2,'')" inputmode="numeric" pattern="^[0-9]*$" (ionInput)="onValidation($event)"
+                       >
+                      </ion-input>
+                      <ion-input #otp2 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp3,otp1)" inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                      :
+                      <ion-input #otp3 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp4,otp2)" inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                      <ion-input #otp4 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,'',otp3)" (ionInput)="onInputLast($event)"  inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                    </div>
+                  </div>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <div class="timer-group text-center">
+                    <ion-label>
+                      FIN
+                    </ion-label>
+                    <div class="d-flex-v-center" style="margin: 0 48px;">
+                      <ion-input #otp5 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp6,'')" inputmode="numeric" pattern="^[0-9]*$" >
+                      </ion-input>
+                      <ion-input #otp6 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp7,otp5)" inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                      :
+                      <ion-input #otp7 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp8,otp6)" inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                      <ion-input #otp8 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,'',otp7)" (ionInput)="onInputLast($event)"  inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                    </div>
+                  </div>
+                </ion-col>
+              </ion-row>
+              <br>
+              <div class="text-center">
+                <button class="add-button" routerLink="/program-report" routerDirection="forward">AÑADIR</button>
+              </div>
+              <br>
+              <button class="card-button" routerLink="/program-report" routerDirection="forward">
+                VER CARGAS PROGRAMADAS
+              </button>
+            </form>
           </div>
           <div *ngSwitchCase="2">
             <ion-row>

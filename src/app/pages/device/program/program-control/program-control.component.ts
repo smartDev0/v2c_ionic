@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { IonInput } from "@ionic/angular";
-
+import { FormGroup, FormControl, Validators } from "@angular/forms";
 @Component({
   selector: "app-program-control",
   templateUrl: "./program-control.component.html",
@@ -15,6 +15,12 @@ export class ProgramControlComponent implements OnInit {
   public isVActive = false;
   public isSActive = false;
   public isDActive = false;
+  timerForm = new FormGroup({
+    stepOne: new FormControl("", [Validators.min(0), Validators.max(9)]),
+    stepTwo: new FormControl(""),
+    stepThree: new FormControl(""),
+    stepFour: new FormControl(""),
+  });
   constructor() {}
 
   ngOnInit() {}
@@ -53,6 +59,14 @@ export class ProgramControlComponent implements OnInit {
     if (!regExp.test(newValue)) {
       event.target.value = newValue.slice(0, -1);
       console.log(event.target.value);
+    }
+  }
+  onValidation(event) {
+    if (event.target.value > 10) {
+      this.timerForm.controls["stepOne"].setValue(
+        event.target.value.slice(0, 1)
+      );
+      return false;
     }
   }
   onChangeSelect(event) {

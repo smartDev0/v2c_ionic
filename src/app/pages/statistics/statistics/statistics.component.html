@@ -1,7 +1,6 @@
 <ion-content fullscreen>
   <ion-toolbar color="primary" class="toolbar-radius">
-    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/home"
-      routerDirection="forward">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/home" routerDirection="forward">
     <ion-row>
       <ion-col class="text-center">
         <img src="assets/statistics-logo.png" alt="..." class="information-img">
@@ -19,11 +18,10 @@
   <ion-card style="margin-top: -20px;z-index: 10;" mode="ios">
     <ion-card-content style="padding: 6px;">
       <ion-toolbar mode="md">
-        <ion-segment value="1" (ionChange)="segmentChanged($event)"
-          color="primary">
+        <ion-segment value="1" (ionChange)="segmentChanged($event)" color="primary">
           <ion-segment-button value="1">
             <!-- <ion-icon name="flash-outline"></ion-icon> -->
-             <img src="assets/electric.png" class="euro-img" *ngIf="!electricActive">
+            <img src="assets/electric.png" class="euro-img" *ngIf="!electricActive">
             <img src="assets/electric-active.png" class="euro-img" *ngIf="electricActive">
           </ion-segment-button>
           <ion-segment-button value="2" rippleEffect="false">
@@ -47,10 +45,9 @@
         </ion-label>
         &nbsp;
         &nbsp;
-        <ion-datetime class="datetime-ion" value="{{today | date}}"
-          doneText="Ok"
-           monthShortNames='Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic' 
-          cancelText="Cancelar" placeholder="Select Date" mode="ios"></ion-datetime>
+        <ion-datetime class="datetime-ion" value="{{today | date}}" doneText="Ok"
+          monthShortNames='Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic' cancelText="Cancelar"
+          placeholder="Select Date" mode="ios"></ion-datetime>
         <img src="assets/calendar.png" alt="" class="calendar-icon">
       </div>
     </ion-col>
@@ -63,10 +60,9 @@
         </ion-label>
         &nbsp;
         &nbsp;
-        <ion-datetime class="datetime-ion" value="{{today | date}}"
-          doneText="Ok"
- monthShortNames='Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic' 
-          cancelText="Cancelar" placeholder="Select Date" mode="ios"></ion-datetime>
+        <ion-datetime class="datetime-ion" value="{{today | date}}" doneText="Ok"
+          monthShortNames='Ene, Feb, Mar, Abr, May, Jun, Jul, Ago, Sep, Oct, Nov, Dic' cancelText="Cancelar"
+          placeholder="Select Date" mode="ios"></ion-datetime>
         <img src="assets/calendar.png" alt="" class="calendar-icon">
       </div>
     </ion-col>
