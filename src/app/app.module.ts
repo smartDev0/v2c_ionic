@@ -10,14 +10,33 @@ import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import localeEs from "@angular/common/locales/es";
 import { registerLocaleData } from "@angular/common";
+
+import { environment } from "../environments/environment";
+import { AngularFireModule } from "@angular/fire";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+
+import { HttpConfigInterceptor } from "./shared/service/interceptor.service";
+import { AuthenticationService } from "./shared/service/authentication.service";
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    AppRoutingModule,
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+  ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    AuthenticationService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpConfigInterceptor,
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent],
 })
