@@ -97,21 +97,21 @@ export class StatisticsGraphComponent implements OnInit {
                   // stepSize: 1,
                   callback: function (value) {
                     if (value === 0) {
-                      return "0 kwh";
+                      return "0 kWh";
                     } else if (value === 10) {
-                      return "10 kwh";
+                      return "10 kWh";
                     } else if (value === 20) {
-                      return "20 kwh";
+                      return "20 kWh";
                     } else if (value === 30) {
-                      return "30 kwh";
+                      return "30 kWh";
                     } else if (value === 40) {
-                      return "40 kwh";
+                      return "40 kWh";
                     } else if (value === 50) {
-                      return "50 kwh";
+                      return "50 kWh";
                     } else if (value === 60) {
-                      return "60 kwh";
+                      return "60 kWh";
                     } else if (value === 70) {
-                      return "70 kwh";
+                      return "70 kWh";
                     } else {
                       return "";
                     }

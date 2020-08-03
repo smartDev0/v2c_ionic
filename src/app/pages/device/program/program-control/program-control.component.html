@@ -210,44 +210,54 @@
               </ion-col>
             </ion-row>
             <ion-row>
-              <ion-col>
-                <div class="timer-group text-center">
-                  <ion-label>
-                    INICIO
-                  </ion-label>
-                  <div class="d-flex-v-center">
-                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num1
-                      (keydown)="moveFocus($event, num2)">
-                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num2
-                      (keydown)="moveFocus($event, num3)">
-                    :
-                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num3
-                      (keydown)="moveFocus($event, num4)">
-                    <input type="number" class="timper-input" maxlength="1" #num4 (keydown)="moveFocus($event, num4)">
+                <ion-col>
+                  <div class="timer-group text-center">
+                    <ion-label>
+                      INICIO
+                    </ion-label>
+                    <div class="d-flex-v-center" style="margin: 0 48px;">
+                      <ion-input #otp1 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp2,'')" inputmode="numeric" pattern="^[0-9]*$" (ionInput)="onValidation($event)"
+                       >
+                      </ion-input>
+                      <ion-input #otp2 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp3,otp1)" inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                      :
+                      <ion-input #otp3 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp4,otp2)" inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                      <ion-input #otp4 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,'',otp3)" (ionInput)="onInputLast($event)"  inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                    </div>
                   </div>
-                </div>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <div class="timer-group text-center">
-                  <ion-label>
-                    FIN
-                  </ion-label>
-                  <div class="d-flex-v-center">
-                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num5
-                      (keydown)="moveFocus($event, num6)">
-                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num6
-                      (keydown)="moveFocus($event, num7)">
-                    :
-                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num7
-                      (keydown)="moveFocus($event, num8)">
-                    <input type="number" class="timper-input" min="0" max="9" maxlength="1" #num8
-                      (keydown)="moveFocus($event, num8)">
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <div class="timer-group text-center">
+                    <ion-label>
+                      FIN
+                    </ion-label>
+                    <div class="d-flex-v-center" style="margin: 0 48px;">
+                      <ion-input #otp5 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp6,'')" inputmode="numeric" pattern="^[0-9]*$" >
+                      </ion-input>
+                      <ion-input #otp6 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp7,otp5)" inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                      :
+                      <ion-input #otp7 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,otp8,otp6)" inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                      <ion-input #otp8 required maxLength="1" class="timper-input" min="0" max="9"
+                        (keyup)="otpController($event,'',otp7)" (ionInput)="onInputLast($event)"  inputmode="numeric" pattern="^[0-9]*$">
+                      </ion-input>
+                    </div>
                   </div>
-                </div>
-              </ion-col>
-            </ion-row>
+                </ion-col>
+              </ion-row>
             <br>
             <div class="text-center">
               <button class="add-button" routerLink="/program-report" routerDirection="forward">AÑADIR</button>
