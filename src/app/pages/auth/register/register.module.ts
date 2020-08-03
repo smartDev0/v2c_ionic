@@ -4,7 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { Routes, RouterModule } from "@angular/router";
 
 import { IonicModule } from "@ionic/angular";
-
+import { ReactiveFormsModule } from "@angular/forms";
 import { RegisterComponent } from "./register.component";
 
 const routes: Routes = [
@@ -20,6 +20,7 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
+    ReactiveFormsModule,
   ],
   declarations: [RegisterComponent],
 })

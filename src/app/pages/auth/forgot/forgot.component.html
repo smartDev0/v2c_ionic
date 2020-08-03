@@ -3,11 +3,11 @@
   <div class="logo-img">
     <img src="assets/logo.png">
   </div>
-  <form>
+  <form [formGroup]="forgotForm" (ngSubmit)="onSubmit()">
     <div class="form">
       <div class="forgot-form">
         <div class="forgot-img d-flex-v-center">
-        <img src="assets/forgot.png">
+          <img src="assets/forgot.png">
         </div>
         <div class="forgot-title">
           ¿HAS OLVIDADO LA CONTRASEÑA?
@@ -25,12 +25,16 @@
         <div class="form-group">
           <div class="input-group">
             <ion-icon name="mail" class="email-icon"></ion-icon>
-            <input type="email" class="form-control forgot-email" name="email"
-              placeholder="Escribe tu correo electrónico">
+            <input type="email" class="form-control forgot-email" name="email" formControlName="email"
+              placeholder="Escribe tu correo electrónico" required
+              [ngClass]="{ 'is-invalid': submitted && f.email.errors }">
+          </div>
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Title is required</div>
           </div>
         </div>
         <br>
-        <button class="signin-button">ENVIAR</button>
+        <button class="signin-button" type="submit">ENVIAR</button>
       </div>
     </div>
   </form>
