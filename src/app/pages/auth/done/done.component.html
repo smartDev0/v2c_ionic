@@ -1,4 +1,5 @@
 <ion-content fullscreen>
+   <img src="assets/ico-close.png" class="close-icon" routerLink="/login" routerDirection="forward">
   <div class="done-form">
     <img src="assets/success.png">
     <div class="done-title">
@@ -13,7 +14,7 @@
       acabas de recibir.
     </div>
     <br>
-    <button class="done-button" routerLink="/home" routerDirection="forward">
+    <button class="done-button" (click)="authService.SendVerificationMail()">
       ¡COMENZAR!
     </button>
   </div>

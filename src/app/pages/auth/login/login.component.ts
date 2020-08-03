@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
   onSubmit() {
     this.submitted = true;
-    console.log(this.loginForm);
     // stop here if form is invalid
     if (this.loginForm.invalid) {
       return;
@@ -42,7 +41,7 @@ export class LoginComponent implements OnInit {
       .then((res) => {
         console.log(res);
         if (res.user.emailVerified) {
-          this.router.navigate(["done"]);
+          this.router.navigate(["home"]);
         } else {
           window.alert("Email is not verified");
           return false;
