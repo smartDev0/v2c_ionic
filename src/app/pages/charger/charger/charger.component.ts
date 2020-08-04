@@ -64,7 +64,6 @@ export class ChargerComponent implements OnInit {
   }
   onSubmit() {
     this.submitted = true;
-    console.log(this.addForm.value);
     // stop here if form is invalid
     if (this.addForm.invalid) {
       return;
@@ -76,16 +75,18 @@ export class ChargerComponent implements OnInit {
           let toast = await this.toastCtrl.create({
             message: "Pairing successfull",
             duration: 2000,
-            position: "middle",
+            position: "bottom",
           });
           toast.present();
+          this.submitted = false;
         } else {
           let toast = await this.toastCtrl.create({
             message: "Pairing error!!",
             duration: 2000,
-            position: "middle",
+            position: "bottom",
           });
           toast.present();
+          this.submitted = false;
         }
       });
   }
