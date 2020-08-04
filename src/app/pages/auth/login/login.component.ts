@@ -29,7 +29,11 @@ export class LoginComponent implements OnInit {
   get f() {
     return this.loginForm.controls;
   }
-  ngOnInit() {}
+  async ngOnInit() {
+    if (this.authService.isLoggedIn) {
+      this.router.navigate(["home"]);
+    }
+  }
   onSubmit() {
     this.submitted = true;
     // stop here if form is invalid

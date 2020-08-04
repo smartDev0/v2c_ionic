@@ -17,6 +17,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
 import { HttpConfigInterceptor } from "./shared/service/interceptor.service";
 import { AuthenticationService } from "./shared/service/authentication.service";
+import { PairingService } from "./shared/service/pairing-service";
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -32,6 +33,7 @@ import { AuthenticationService } from "./shared/service/authentication.service";
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthenticationService,
+    PairingService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpConfigInterceptor,
