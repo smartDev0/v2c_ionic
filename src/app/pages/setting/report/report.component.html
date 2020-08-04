@@ -38,8 +38,9 @@
     <div class="slider-group">
       <ion-slides pager="false" [options]="BannerOption" #slideone>
         <ion-slide>
-          <div class="slider-item">
-            <img src="assets/check.png" alt="..." class="card-popup-img">
+          <div class="slider-item" (click)="onChangeStats('1')">
+            <img src="assets/check.png" alt="..." class="card-popup-img" *ngIf="isActiveOne">
+            <img src="assets/non-check.png" alt="..." class="card-popup-img" *ngIf="!isActiveOne">
             <img src="assets/garaje.png" alt="..." class="slider-img">
             <div class="slider-text">
               DARK GARAJE B
@@ -47,11 +48,22 @@
           </div>
         </ion-slide>
         <ion-slide>
-          <div class="slider-item">
-            <img src="assets/non-check.png" alt="..." class="card-popup-img">
+          <div class="slider-item" (click)="onChangeStats('2')">
+            <img src="assets/check.png" alt="..." class="card-popup-img" *ngIf="isActiveTwo">
+            <img src="assets/non-check.png" alt="..." class="card-popup-img" *ngIf="!isActiveTwo">
             <img src="assets/plaza.png" alt="..." class="slider-img">
             <div class="slider-text">
               PLUS GARAJE
+            </div>
+          </div>
+        </ion-slide>
+        <ion-slide>
+          <div class="slider-item" (click)="onChangeStats('3')">
+            <img src="assets/check.png" alt="..." class="card-popup-img" *ngIf="isActiveThree">
+            <img src="assets/non-check.png" alt="..." class="card-popup-img" *ngIf="!isActiveThree">
+            <img src="assets/garaje.png" alt="..." class="slider-img">
+            <div class="slider-text">
+              DARK GARAJE B
             </div>
           </div>
         </ion-slide>
