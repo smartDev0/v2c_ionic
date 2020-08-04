@@ -76,6 +76,8 @@ export class ChargerComponent implements OnInit {
             message: "Pairing successfull",
             duration: 2000,
             position: "bottom",
+            mode: "ios",
+            color: "dark",
           });
           toast.present();
           this.submitted = false;
@@ -84,6 +86,8 @@ export class ChargerComponent implements OnInit {
             message: "Pairing error!!",
             duration: 2000,
             position: "bottom",
+            mode: "ios",
+            color: "dark",
           });
           toast.present();
           this.submitted = false;
