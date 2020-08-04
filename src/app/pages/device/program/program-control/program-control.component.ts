@@ -7,6 +7,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
   styleUrls: ["./program-control.component.scss"],
 })
 export class ProgramControlComponent implements OnInit {
+  public ampeaValue = 20;
   segment = 1;
   public isLActive = false;
   public isMActive = false;
@@ -24,6 +25,9 @@ export class ProgramControlComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+  onChangeAmpea(event) {
+    this.ampeaValue = event.target.value;
+  }
   segmentChanged(event) {
     this.segment = Number(event);
     this.isLActive = false;

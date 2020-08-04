@@ -17,7 +17,7 @@
       <ion-card-content>
         <ion-row>
           <ion-col class="text-center">
-            <div class="ampere-value">20</div>
+            <div class="ampere-value">{{ampeaValue}}</div>
             <div class="ampere-text">
               AMPERIOS
             </div>
@@ -25,7 +25,7 @@
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-range min="0" max="2000" step="100" value="1400" snaps color="primary">
+             <ion-range min="0" max="40" step="2" value="20"  value="{{ampeaValue}}" snaps color="primary" (ionChange)="onChangeAmpea($event)">
             </ion-range>
           </ion-col>
         </ion-row>
