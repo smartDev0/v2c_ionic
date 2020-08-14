@@ -1,7 +1,9 @@
 <ion-content fullscreen>
   <ion-toolbar color="primary" class="toolbar-radius">
-    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/home" routerDirection="forward">
-    <img src="assets/option.png" alt="..." class="option-icon" routerLink="/option" routerDirection="forward">
+    <img src="assets/back.png" alt="..." class="back-icon" routerLink="/home"
+      routerDirection="forward">
+    <img src="assets/option.png" alt="..." class="option-icon"
+      routerLink="/option" routerDirection="forward">
     <ion-row>
       <ion-col>
         <div class="device-title">
@@ -13,8 +15,8 @@
     </ion-row>
   </ion-toolbar>
   <div class="connection">
-    <ion-card style="margin-top: -45px;z-index: 10;  background: #72c770;
-  box-shadow: 0px 20px 75px rgba(221,221,221,0.55);" mode="ios">
+    <ion-card style="margin-top: -45px;z-index: 10; background: #72c770;
+      box-shadow: 0px 20px 75px rgba(221,221,221,0.55);" mode="ios">
       <ion-card-content style="padding: 0px;">
         <ion-row>
           <ion-col class="text-center">
@@ -26,7 +28,9 @@
         </ion-row>
         <ion-row>
           <ion-col>
-            <ion-range min="0" max="40" step="2" value="20"  value="{{ampeaValue}}" snaps color="primary" (ionChange)="onChangeAmpea($event)">
+            <ion-range min="0" max="40" step="2" value="20"
+              value="{{ampeaValue}}" snaps color="primary"
+              (ionChange)="onChangeAmpea($event)">
             </ion-range>
           </ion-col>
         </ion-row>
@@ -36,19 +40,21 @@
       <div class="control">
         <ion-row>
           <ion-col class="d-flex-v-center">
-            <div class="control-img ">
+            <div class="control-img">
               <img src="assets/lock.png" alt="...">
             </div>
           </ion-col>
           <ion-col class="d-flex-v-center border-div">
-            <div class="control-img ">
+            <div class="control-img">
               <img src="assets/out.png" alt="...">
             </div>
           </ion-col>
           <ion-col class="d-flex-v-center">
-            <div class="control-img" routerLink="/program" routerDirection="forward">
+            <div class="control-img" routerLink="/program"
+              routerDirection="forward">
               <img src="assets/program.png" alt="...">
-              <img src="assets/sub-notification.png" alt="..." class="sub-notification">
+              <img src="assets/sub-notification.png" alt="..."
+                class="sub-notification">
             </div>
           </ion-col>
         </ion-row>
@@ -121,45 +127,50 @@
                 </div>
               </ion-col>
             </ion-row>
-            <img src="assets/menu.png" class="menu-icon" routerLink="/statistics-graph" routerDirection="forward">
-            <ion-row>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  2h 13m 09s 
-                  <div>
-                    TIEMPO TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  17.1kW
-                  <div>
-                    POTENCIA MÁXIMA
-                  </div>
-                </ion-label>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  0,57€
-                  <div>
-                    COSTE TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  10.29kWh
-                  <div>
-                    ENERGÍA TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-            </ion-row>
+            <img src="assets/menu.png" class="menu-icon"
+              routerLink="/statistics-graph" routerDirection="forward">
+
+            <div class="pt-8">
+              <ion-row>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    2h 13m 09s
+                    <div>
+                      TIEMPO TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    17.1kW
+                    <div>
+                      POTENCIA MÁXIMA
+                    </div>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    0,57€
+                    <div>
+                      COSTE TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    10.29kWh
+                    <div>
+                      ENERGÍA TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+            </div>
+
           </div>
-          
+
           <div *ngSwitchCase="2">
             <ion-row>
               <ion-col>
@@ -172,43 +183,47 @@
                 </div>
               </ion-col>
             </ion-row>
-            <img src="assets/menu.png" class="menu-icon" routerLink="/statistics-graph" routerDirection="forward">
-            <ion-row>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  4h 21m 08s 
-                  <div>
-                    TIEMPO TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                 20.0kW
-                  <div>
-                    POTENCIA MÁXIMA
-                  </div>
-                </ion-label>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                 1,11€
-                  <div>
-                    COSTE TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  17.23kWh
-                  <div>
-                    ENERGÍA TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-            </ion-row>
+            <img src="assets/menu.png" class="menu-icon"
+              routerLink="/statistics-graph" routerDirection="forward">
+            <div class="pt-8">
+              <ion-row>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    4h 21m 08s
+                    <div>
+                      TIEMPO TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    20.0kW
+                    <div>
+                      POTENCIA MÁXIMA
+                    </div>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    1,11€
+                    <div>
+                      COSTE TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    17.23kWh
+                    <div>
+                      ENERGÍA TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+            </div>
+
           </div>
           <div *ngSwitchCase="3">
             <ion-row>
@@ -222,43 +237,47 @@
                 </div>
               </ion-col>
             </ion-row>
-            <img src="assets/menu.png" class="menu-icon" routerLink="/statistics-graph" routerDirection="forward">
-            <ion-row>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  14h 0m 0s
-                  <div>
-                    TIEMPO TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  20.2kW
-                  <div>
-                    POTENCIA MÁXIMA
-                  </div>
-                </ion-label>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  3,20€
-                  <div>
-                    COSTE TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  8.29kWh
-                  <div>
-                    ENERGÍA TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-            </ion-row>
+            <img src="assets/menu.png" class="menu-icon"
+              routerLink="/statistics-graph" routerDirection="forward">
+            <div class="pt-8">
+              <ion-row>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    14h 0m 0s
+                    <div>
+                      TIEMPO TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    20.2kW
+                    <div>
+                      POTENCIA MÁXIMA
+                    </div>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    3,20€
+                    <div>
+                      COSTE TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    8.29kWh
+                    <div>
+                      ENERGÍA TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+            </div>
+
           </div>
           <div *ngSwitchCase="4">
             <ion-row>
@@ -272,43 +291,47 @@
                 </div>
               </ion-col>
             </ion-row>
-            <img src="assets/menu.png" class="menu-icon" routerLink="/statistics-graph" routerDirection="forward">
-            <ion-row>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  87h 23m 05s 
-                  <div>
-                    TIEMPO TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  19.3kW
-                  <div>
-                    POTENCIA MÁXIMA
-                  </div>
-                </ion-label>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  17,12€
-                  <div>
-                    COSTE TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  91.43kWh
-                  <div>
-                    ENERGÍA TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-            </ion-row>
+            <img src="assets/menu.png" class="menu-icon"
+              routerLink="/statistics-graph" routerDirection="forward">
+            <div class="pt-8">
+              <ion-row>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    87h 23m 05s
+                    <div>
+                      TIEMPO TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    19.3kW
+                    <div>
+                      POTENCIA MÁXIMA
+                    </div>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    17,12€
+                    <div>
+                      COSTE TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    91.43kWh
+                    <div>
+                      ENERGÍA TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+            </div>
+
           </div>
           <div *ngSwitchCase="5">
             <ion-row>
@@ -322,64 +345,69 @@
                 </div>
               </ion-col>
             </ion-row>
-            <img src="assets/menu.png" class="menu-icon" routerLink="/statistics-graph" routerDirection="forward">
-            <ion-row>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  	127h 24m 32s 
-                  <div>
-                    TIEMPO TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  19.1kW
-                  <div>
-                    POTENCIA MÁXIMA
-                  </div>
-                </ion-label>
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  37,23€
-                  <div>
-                    COSTE TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-              <ion-col class="text-center">
-                <ion-label class="staticstics-card-text">
-                  141.32kWh
-                  <div>
-                    ENERGÍA TOTAL
-                  </div>
-                </ion-label>
-              </ion-col>
-            </ion-row>
+            <img src="assets/menu.png" class="menu-icon"
+              routerLink="/statistics-graph" routerDirection="forward">
+            <div class="pt-8">
+              <ion-row>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    127h 24m 32s
+                    <div>
+                      TIEMPO TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    19.1kW
+                    <div>
+                      POTENCIA MÁXIMA
+                    </div>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    37,23€
+                    <div>
+                      COSTE TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+                <ion-col class="text-center">
+                  <ion-label class="staticstics-card-text">
+                    141.32kWh
+                    <div>
+                      ENERGÍA TOTAL
+                    </div>
+                  </ion-label>
+                </ion-col>
+              </ion-row>
+            </div>
+
           </div>
         </div>
 
 
-          <ion-segment mode="ios" value="3" (ionChange)="segmentChanged($event)" class="segment-ion">
-            <ion-segment-button value="1" class="stastics-seg">
-              <ion-label>Hoy</ion-label>
-            </ion-segment-button>
-            <ion-segment-button value="2" class="stastics-seg">
-              <ion-label>Ayer</ion-label>
-            </ion-segment-button>
-            <ion-segment-button value="3" class="stastics-seg">
-              <ion-label>7 días</ion-label>
-            </ion-segment-button>
-            <ion-segment-button value="4" class="stastics-seg">
-              <ion-label>Mes</ion-label>
-            </ion-segment-button>
-            <ion-segment-button value="5" class="stastics-seg">
-              <ion-label>3 Meses</ion-label>
-            </ion-segment-button>
-          </ion-segment>
+        <ion-segment mode="ios" value="3" (ionChange)="segmentChanged($event)"
+          class="segment-ion">
+          <ion-segment-button value="1" class="stastics-seg">
+            <ion-label>Hoy</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="2" class="stastics-seg">
+            <ion-label>Ayer</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="3" class="stastics-seg">
+            <ion-label>7 días</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="4" class="stastics-seg">
+            <ion-label>Mes</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="5" class="stastics-seg">
+            <ion-label>3 Meses</ion-label>
+          </ion-segment-button>
+        </ion-segment>
 
       </ion-card-content>
     </ion-card>
