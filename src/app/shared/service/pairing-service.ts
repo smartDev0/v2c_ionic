@@ -48,9 +48,25 @@ export class PairingService {
       );
   }
 
-  async createPairing(deviceid: string, tag: string) {
+  async createPairing(deviceid, tag, model, latitude, longitude) {
+    const price = 0.1147;
     return new Promise((resolve) => {
-      var params = new HttpParams().set("deviceId", deviceid).set("tag", tag);
+      // var params = new HttpParams()
+      //   .set("deviceId", deviceid)
+      //   .set("latitude", latitude)
+      //   .set("longitude", longitude)
+      //   .set("master", true)
+      //   .set("model", model)
+      //   .set("tag", tag);
+      const params = {
+        deviceId: deviceid,
+        latitude: latitude,
+        longitude: longitude,
+        master: true,
+        model: model,
+        price: price,
+        tag: tag,
+      };
       this.http
         .post(
           environment.v2cServiceConfig.basePath + "/api/v1/pairings/",

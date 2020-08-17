@@ -31,12 +31,15 @@
             <div>
               <!-- <input class="charger-input" type="text" placeholder="Nombre del cargador"> -->
               <input type="text" class="charger-input" name="tag" formControlName="tag"
-                placeholder="Nombre del cargador" [ngClass]="{ 'is-invalid': submitted && f.tag.errors }">
+                placeholder="Nombre del cargador" [ngClass]="{ 'is-invalid': submitted && f.tag.errors }" required>
               <div class="infor-icon tooltip">
                 <ion-icon name="information-circle"></ion-icon>
                 <span class="tooltiptext">Nombra el cargador de forma que puedas identificarlo fácilmente. Por ejemplo:
                   "Dark Garaje B" o "Plus Plaza 20"</span>
               </div>
+              <div *ngIf="submitted && f.tag.errors" class="invalid-feedback">
+              <div *ngIf="f.tag.errors.required">tag is required</div>
+            </div>
             </div>
           </div>
         </ion-col>
