@@ -62,7 +62,7 @@ export class PairingService {
         deviceId: deviceid,
         latitude: latitude,
         longitude: longitude,
-        master: true,
+        isMaster: true,
         model: model,
         price: price,
         tag: tag,
@@ -74,11 +74,11 @@ export class PairingService {
         )
         .subscribe(
           (data: any) => {
-            resolve(true);
+            resolve(data);
           },
           (error) => {
-            console.log(error);
-            resolve(false);
+            // console.log(error);
+            resolve(error);
           }
         );
     });

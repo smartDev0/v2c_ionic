@@ -99,7 +99,8 @@ export class ChargerComponent implements OnInit {
         this.longitude
       )
       .then(async (result) => {
-        if (result) {
+        // console.log(result);
+        if (result["status"] == 200) {
           let toast = await this.toastCtrl.create({
             message: "Pairing successfull",
             duration: 2000,
@@ -109,9 +110,13 @@ export class ChargerComponent implements OnInit {
           });
           toast.present();
           this.submitted = false;
+          this.addForm.reset();
+          this.isActiveThree = false;
+          this.isActiveOne = false;
+          this.isActiveTwo = false;
         } else {
           let toast = await this.toastCtrl.create({
-            message: "Pairing error!!",
+            message: result["error"],
             duration: 2000,
             position: "bottom",
             mode: "ios",
