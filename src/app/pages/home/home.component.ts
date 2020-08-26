@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { LoadingController } from "@ionic/angular";
 import { PairingService } from './../../shared/service/pairing-service'
+import { DeviceService } from './../../shared/service/device-service'
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
@@ -17,6 +18,7 @@ export class HomeComponent implements OnInit {
   categories: any;
   constructor(
     private pairingService: PairingService,
+    private deviceService: DeviceService,
     public loadingController: LoadingController
   ) {
     this.today = Date.now();
@@ -48,10 +50,14 @@ export class HomeComponent implements OnInit {
               .then((loadingElement) => {
                 loadingElement.present();
                 var ref = this;
-                this.pairingService.reportPairing(data.deviceId).then((res) => {
-                  console.log(res);
-                  ref.loadingController.dismiss();
+                this.deviceService.isConnectedDevice(data.deviceId).then((res) => {
+                  console.log("deviceId:" + data.deviceId + " connected:" + res);
+                  this.deviceService.getDeviceProperty(data.deviceId,"charge_state").then((res) => {
+                    console.log("deviceId:" + data.deviceId + " charge_state:" + res);
+                    ref.loadingController.dismiss();
+                  });
                 });
+                
               });
           });
           ref.loadingController.dismiss();
@@ -72,7 +78,7 @@ export class HomeComponent implements OnInit {
         .then((loadingElement) => {
           loadingElement.present();
           var ref = this;
-          this.pairingService.startCharge(id).then((res) => {
+          this.deviceService.startCharge(id).then((res) => {
             console.log(res);
             ref.loadingController.dismiss();
           });
@@ -85,7 +91,7 @@ export class HomeComponent implements OnInit {
         .then((loadingElement) => {
           loadingElement.present();
           var ref = this;
-          this.pairingService.pauseCharge(id).then((res) => {
+          this.deviceService.pauseCharge(id).then((res) => {
             console.log(res);
             ref.loadingController.dismiss();
           });
