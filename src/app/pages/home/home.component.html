@@ -53,9 +53,9 @@
       <img src="assets/plus.png" class="plus-img" routerLink="/charger" routerDirection="forward">
     </ion-row>
 
-    <ion-row>
-      <ion-col>
-        <ion-card style="margin: 0px;" mode="ios">
+    <ion-row *ngIf="categories">
+      <ion-col  size="6" *ngFor="let data of categories; let i = index">
+        <ion-card style="margin: 0px;" mode="ios" *ngIf="data.model == 1">
           <ion-card-header routerLink="/non-connection" routerDirection="forward">
             <img src="assets/garaje.png" class="device-img">
           </ion-card-header>
@@ -64,12 +64,38 @@
               Dark Garaje B
             </div>
             <div class="text-center">
-              <ion-toggle name="garaje" color="success" checked mode="md"></ion-toggle>
+              <ion-toggle name="garaje" color="success" checked mode="md" (ionChange)="onChangeEvent($event.detail, data.deviceId)" ></ion-toggle>
+            </div>
+          </ion-card-content>
+        </ion-card>
+        <ion-card style="margin: 0px;" mode="ios" *ngIf="data.model == 2">
+          <ion-card-header routerLink="/non-connection" routerDirection="forward">
+            <img src="assets/chalet.png" class="device-img">
+          </ion-card-header>
+          <ion-card-content>
+            <div class="device-card-text">
+              Plus Chalet
+            </div>
+            <div class="text-center">
+              <ion-toggle name="chalet" color="success" mode="md" (ionChange)="onChangeEvent($event.detail, data.deviceId)" ></ion-toggle>
+            </div>
+          </ion-card-content>
+        </ion-card>
+        <ion-card style="margin: 0px;" mode="ios" *ngIf="data.model == 3">
+          <ion-card-header routerLink="/non-connection" routerDirection="forward">
+            <img src="assets/chalet.png" class="device-img">
+          </ion-card-header>
+          <ion-card-content>
+            <div class="device-card-text">
+              Plus Chalet
+            </div>
+            <div class="text-center">
+              <ion-toggle name="chalet" color="success" mode="md" (ionChange)="onChangeEvent($event.detail, data.deviceId)" ></ion-toggle>
             </div>
           </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col>
+      <!-- <ion-col  size="6" >
         <ion-card style="margin: 0px;" mode="ios">
           <ion-card-header routerLink="/non-connection" routerDirection="forward">
             <img src="assets/chalet.png" class="device-img">
@@ -84,9 +110,7 @@
           </ion-card-content>
         </ion-card>
       </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
+      <ion-col  size="6" >
         <ion-card style="margin: 0px;" mode="ios">
           <ion-card-header class="text-center" routerLink="/non-connection" routerDirection="forward">
             <img src="assets/plaza.png" class="device-img">
@@ -101,7 +125,7 @@
           </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col>
+      <ion-col  size="6" >
         <ion-card style="margin: 0px;" mode="ios">
           <ion-card-header routerLink="/non-connection" routerDirection="forward">
             <img src="assets/empresa.png" class="device-img">
@@ -115,7 +139,7 @@
             </div>
           </ion-card-content>
         </ion-card>
-      </ion-col>
+      </ion-col> -->
     </ion-row>
   </div>
 

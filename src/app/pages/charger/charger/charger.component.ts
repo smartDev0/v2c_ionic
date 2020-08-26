@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ModalController } from "@ionic/angular";
+import { ModalController, LoadingController } from "@ionic/angular";
 import { PairingService } from "./../../../shared/service/pairing-service";
 import { ToastController } from "@ionic/angular";
 import { Router } from "@angular/router";
@@ -46,7 +46,8 @@ export class ChargerComponent implements OnInit {
     public authService: AuthenticationService,
     public router: Router,
     private fb: FormBuilder,
-    private geolocation: Geolocation
+    private geolocation: Geolocation,
+    public loadingController: LoadingController
   ) {
     this.addForm = this.fb.group({
       deviceId: ["", Validators.required],
@@ -90,41 +91,90 @@ export class ChargerComponent implements OnInit {
     if (this.addForm.invalid) {
       return;
     }
-    this.pairingService
-      .createPairing(
-        this.addForm.value.deviceId,
-        this.addForm.value.tag,
-        this.addForm.value.model,
-        this.latitude,
-        this.longitude
-      )
-      .then(async (result) => {
-        // console.log(result);
-        if (result["status"] == 200) {
-          let toast = await this.toastCtrl.create({
-            message: "Pairing successfull",
-            duration: 2000,
-            position: "bottom",
-            mode: "ios",
-            color: "dark",
-          });
-          toast.present();
-          this.submitted = false;
-          this.addForm.reset();
-          this.isActiveThree = false;
-          this.isActiveOne = false;
-          this.isActiveTwo = false;
-        } else {
-          let toast = await this.toastCtrl.create({
-            message: result["error"],
-            duration: 2000,
-            position: "bottom",
-            mode: "ios",
-            color: "dark",
-          });
-          toast.present();
-          this.submitted = false;
-        }
-      });
+     this.loadingController
+       .create({
+         message: "Wait a second...",
+       })
+       .then((loadingElement) => {
+         loadingElement.present();
+         var ref = this;
+         
+         this.pairingService
+           .createPairing(
+             this.addForm.value.deviceId,
+             this.addForm.value.tag,
+             this.addForm.value.model,
+             this.latitude,
+             this.longitude
+           )
+           .then(async (result) => {
+             // console.log(result);
+             if (result["status"] == 200) {
+               let toast = await this.toastCtrl.create({
+                 message: "Pairing successfull",
+                 duration: 2000,
+                 position: "bottom",
+                 mode: "ios",
+                 color: "dark",
+               });
+               toast.present();
+               this.submitted = false;
+               this.addForm.reset();
+               this.isActiveThree = false;
+               this.isActiveOne = false;
+               this.isActiveTwo = false;
+               this.router.navigate(["network"]);
+               ref.loadingController.dismiss();
+             } else {
+               let toast = await this.toastCtrl.create({
+                 message: result["error"],
+                 duration: 2000,
+                 position: "bottom",
+                 mode: "ios",
+                 color: "dark",
+               });
+               toast.present();
+               this.submitted = false;
+               ref.loadingController.dismiss();
+             }
+           });
+       });
+    // this.pairingService
+    //   .createPairing(
+    //     this.addForm.value.deviceId,
+    //     this.addForm.value.tag,
+    //     this.addForm.value.model,
+    //     this.latitude,
+    //     this.longitude
+    //   )
+    //   .then(async (result) => {
+    //     // console.log(result);
+    //     if (result["status"] == 200) {
+    //       let toast = await this.toastCtrl.create({
+    //         message: "Pairing successfull",
+    //         duration: 2000,
+    //         position: "bottom",
+    //         mode: "ios",
+    //         color: "dark",
+    //       });
+    //       toast.present();
+    //       this.submitted = false;
+    //       this.addForm.reset();
+    //       this.isActiveThree = false;
+    //       this.isActiveOne = false;
+    //       this.isActiveTwo = false;
+    //       this.router.navigate(["network"]);
+    //     } else {
+    //       let toast = await this.toastCtrl.create({
+    //         message: result["error"],
+    //         duration: 2000,
+    //         position: "bottom",
+    //         mode: "ios",
+    //         color: "dark",
+    //       });
+    //       toast.present();
+    //       this.submitted = false;
+    //     }
+    //   });
   }
 }
