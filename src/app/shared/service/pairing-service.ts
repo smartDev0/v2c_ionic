@@ -12,7 +12,7 @@ export class PairingService {
     public authService: AuthenticationService
   ) {}
 
-  async getPairings() {
+  getPairings() {
     return new Promise((resolve) => {
       this.http
         .get(environment.v2cServiceConfig.basePath + "/api/v1/pairings/me")

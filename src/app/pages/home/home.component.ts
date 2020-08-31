@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
       (this.currentCostVale / this.maxCostValue) * 100
     );
   }
+
   ionViewWillEnter() {
     this.loadingController
       .create({
@@ -39,29 +40,39 @@ export class HomeComponent implements OnInit {
       .then((loadingElement) => {
         loadingElement.present();
         var ref = this;
-        this.pairingService.getPairings().then((result) => {
-          console.log(result);
-          this.categories = result;
-          this.categories.map((data) => {
-            this.loadingController
-              .create({
-                message: "Wait a second...",
-              })
-              .then((loadingElement) => {
-                loadingElement.present();
-                var ref = this;
-                this.deviceService.isConnectedDevice(data.deviceId).then((res) => {
-                  console.log("deviceId:" + data.deviceId + " connected:" + res);
-                  this.deviceService.getDeviceProperty(data.deviceId,"charge_state").then((res) => {
-                    console.log("deviceId:" + data.deviceId + " charge_state:" + res);
-                    ref.loadingController.dismiss();
-                  });
-                });
-                
-              });
-          });
-          ref.loadingController.dismiss();
-        });
+         setTimeout(() => {
+             this.pairingService.getPairings().then((result) => {
+               this.categories = result;
+               if (this.categories) {
+                 this.categories.map((data) => {
+                   this.loadingController
+                     .create({
+                       message: "Wait a second...",
+                     })
+                     .then((loadingElement) => {
+                       loadingElement.present();
+                       var ref = this;
+                       this.deviceService
+                         .isConnectedDevice(data.deviceId)
+                         .then((res) => {
+                           this.deviceService
+                             .getDeviceProperty(data.deviceId, "charge_state")
+                             .then((response) => {
+                               console.log(
+                                 "deviceId:" +
+                                   data.deviceId +
+                                   " charge_state:" +
+                                   response
+                               );
+                               ref.loadingController.dismiss();
+                             });
+                         });
+                     });
+                 });
+               }
+               ref.loadingController.dismiss();
+             });
+         }, 300);
       });
   }
   async ngOnInit() {
@@ -69,7 +80,6 @@ export class HomeComponent implements OnInit {
   }
   ngAfterViewInit() { }
   onChangeEvent(event, id) {
-    console.log(event.checked);
     if (event.checked) {
       this.loadingController
         .create({
