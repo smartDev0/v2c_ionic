@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   currentCostVale = 72.8;
   percentCost: Number;
   categories: any;
+  
   constructor(
     private pairingService: PairingService,
     private deviceService: DeviceService,
