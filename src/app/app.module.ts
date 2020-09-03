@@ -18,6 +18,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { HttpConfigInterceptor } from "./shared/service/interceptor.service";
 import { AuthenticationService } from "./shared/service/authentication.service";
 import { PairingService } from "./shared/service/pairing-service";
+import { StadisticsService } from "./shared/service/stadistics.service";
 
 import { Geolocation } from "@ionic-native/geolocation/ngx";
 import { NativeGeocoder } from "@ionic-native/native-geocoder/ngx";
@@ -38,6 +39,7 @@ import { NativeGeocoder } from "@ionic-native/native-geocoder/ngx";
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthenticationService,
     PairingService,
+    StadisticsService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: HttpConfigInterceptor,

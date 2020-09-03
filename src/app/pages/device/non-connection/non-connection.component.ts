@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import * as $ from "jquery";
+import { ActivatedRoute } from '@angular/router';
+import { StadisticsService } from "./../../../shared/service/stadistics.service";
 @Component({
   selector: "app-non-connection",
   templateUrl: "./non-connection.component.html",
@@ -8,20 +9,25 @@ import * as $ from "jquery";
 export class NonConnectionComponent implements OnInit {
   color: string;
   number: number;
-  constructor() {}
+  statisticsData: any;
+  deviceId: string;
+  constructor(
+    private route: ActivatedRoute,
+    private stadisticsService: StadisticsService
+  ) {
+    this.route.queryParams.subscribe((params) => {
+      console.log(params);
+      this.deviceId = params.deviceId;
+      this.stadisticsService.getDeviceSatistics(params.deviceId).subscribe(res => {
+        console.log(res);
+        this.statisticsData = res;
+      })
+    });
+  }
 
   ngOnInit() {}
   segmentChanged(event) {}
   onRangeChangeHandler() {
-    // if (this.number > 0 && this.number < 26) {
-    //   this.color = "dark";
-    // } else if (this.number > 25 && this.number < 51) {
-    //   this.color = "primary";
-    // } else if (this.number > 50 && this.number < 76) {
-    //   this.color = "secondary";
-    // } else {
-    //   this.color = "danger";
-    // }
   }
   ngAfterViewInit() {}
 }

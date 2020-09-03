@@ -56,7 +56,7 @@
     <ion-row *ngIf="categories">
       <ion-col  size="6" *ngFor="let data of categories; let i = index">
         <ion-card style="margin: 0px;" mode="ios" *ngIf="data.model == 1">
-          <ion-card-header routerLink="/non-connection" routerDirection="forward">
+          <ion-card-header [routerLink]="['/non-connection']" [queryParams]="{deviceId:data.deviceId}" routerDirection="forward">
             <img src="assets/garaje.png" class="device-img">
           </ion-card-header>
           <ion-card-content>
@@ -69,7 +69,7 @@
           </ion-card-content>
         </ion-card>
         <ion-card style="margin: 0px;" mode="ios" *ngIf="data.model == 2">
-          <ion-card-header routerLink="/non-connection" routerDirection="forward">
+          <ion-card-header [routerLink]="['/non-connection']" [queryParams]="{deviceId:data.deviceId}" routerDirection="forward">
             <img src="assets/chalet.png" class="device-img">
           </ion-card-header>
           <ion-card-content>
@@ -82,7 +82,7 @@
           </ion-card-content>
         </ion-card>
         <ion-card style="margin: 0px;" mode="ios" *ngIf="data.model == 3">
-          <ion-card-header routerLink="/non-connection" routerDirection="forward">
+          <ion-card-header [routerLink]="['/non-connection']" [queryParams]="{deviceId:data.deviceId}" routerDirection="forward">
             <img src="assets/chalet.png" class="device-img">
           </ion-card-header>
           <ion-card-content>
